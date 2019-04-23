@@ -47,11 +47,11 @@
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
             if($stmt){
                 if($oldEmail==$nuevosDatos["correo"]){
-                    $stmt->bind_param("ssis", $nuevosDatos["nombre"],
+                    $stmt->bind_param("ssisss", $nuevosDatos["nombre"],
                     $nuevosDatos["apodo"], $nuevosDatos["edad"],
                     $nuevosDatos["passwd"], $oldEmail, $oldPasswd);
                 }else{
-                    $stmt->bind_param("sssis", $nuevosDatos["correo"], $nuevosDatos["nombre"],
+                    $stmt->bind_param("sssisss", $nuevosDatos["correo"], $nuevosDatos["nombre"],
                     $nuevosDatos["apodo"], $nuevosDatos["edad"],
                     $nuevosDatos["passwd"], $oldEmail, $oldPasswd);
                 }
