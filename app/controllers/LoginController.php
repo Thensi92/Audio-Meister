@@ -2,12 +2,12 @@
     if(isset($_POST["login"])){
         require_once("app/db/usuario/ConfigDB.php");
         require_once("app/db/Conexion.php");
-        require_once("app/models/usuario/UserModel.php");
+        require_once("app/models/usuario/Usuario.php");
         $correo = $_POST['correo'];
         $pass = $_POST['pass'];
         
         //modelo
-        $login = new UserModel(ConfigDB::$host, ConfigDB::$user, ConfigDB::$pass, ConfigDB::$nameDb);
+        $login = new Usuario(ConfigDB::$host, ConfigDB::$user, ConfigDB::$pass, ConfigDB::$nameDb);
         $datosUsuario = $login->getUsuario($correo, $pass); 
         echo $login->cerrarConexion();
         $isLoged = false;
