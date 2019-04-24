@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST["login"])){
         require_once("app/db/usuario/ConfigDB.php");
-        require_once("app/db/Conexion.php");
+        require_once("app/model_conexion_BBDD.php");
         require_once("app/models/usuario/Usuario.php");
         $correo = $_POST['correo'];
         $pass = $_POST['pass'];
