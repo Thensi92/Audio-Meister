@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST["login"])){
-        require_once("app/db/usuario/ConfigDB.php");
+        require_once("app/db/config.php");
         require_once("app/model_conexion_BBDD.php");
         require_once("app/models/usuario/Usuario.php");
         $correo = $_POST['correo'];
@@ -8,7 +8,7 @@
         
         //modelo
         $login = new Usuario(ConfigDB::$host, ConfigDB::$user, ConfigDB::$pass, ConfigDB::$nameDb);
-        $datosUsuario = $login->getUsuario($correo, $pass); 
+        $datosUsuario = $login->getUsuario($correo, $pass);
         echo $login->cerrarConexion();
         $isLoged = false;
         //recoger los datos en la variable SESSION
@@ -23,7 +23,7 @@
         }else{
             $mensaje = 'Ha iniciado sesión<br><a href="index.php">Ir a inicio</a>';
         }
-        require_once("app/views/usuario/UserMessage.php");
+        require_once("app/views/UserMessage.php");
     }else{
         header("Location: index.php?ctl=login");
     }
