@@ -8,7 +8,7 @@
         
         //modelo
         $login = new Usuario(ConfigDB::$host, ConfigDB::$user, ConfigDB::$pass, ConfigDB::$nameDb);
-        $datosUsuario = $login->getUsuario($correo, $pass);
+        $datosUsuario = $login->getDatos($correo, $pass);
         echo $login->cerrarConexion();
         $isLoged = false;
         //recoger los datos en la variable SESSION
