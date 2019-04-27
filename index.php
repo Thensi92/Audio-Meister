@@ -24,11 +24,7 @@
         }
 
     //SECTION -> DESCOMENTAR BUCLE CUANDO ESTEN LOS CONTROLADORES
-    echo "<section>";
-        echo "<h1> HOLA MUNDO </h1>";
-        echo "<h2> ESTO ES UN SECTION DE PRUEBA </h2>";
-    echo "</section>";
-    /*   
+
         if(isset($_GET['ctl'])){
             foreach($arrayGET as $control => $URI){
                 if($_GET['ctl'] == $control){
@@ -36,9 +32,8 @@
                 }
             }
         }else{
-            require_once("app/views/audios/audios.php");
+            require_once("app/views/defaultView/indexView.php");
         }
-    */
     
     //FOOTER
         require_once("web/html/body/footer/footer.php");
