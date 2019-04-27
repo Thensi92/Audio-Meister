@@ -2,6 +2,7 @@
     session_name('user');
     session_start();
 
+    require_once("web/html/includes/arrayGET/arrayGET.php");
     require_once("web/html/includes/arrayPOST/arrayPOST.php");
 
     //LINKS
