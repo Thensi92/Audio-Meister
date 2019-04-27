@@ -7,7 +7,7 @@
         $pass = $_POST['pass'];
         
         //modelo
-        $login = new Usuario(ConfigDB::$host, ConfigDB::$user, ConfigDB::$pass, ConfigDB::$nameDb);
+        $login = new Login(Config::$host, Config::$user, Config::$pass, Config::$nameDb);
         $datosUsuario = $login->getDatos($correo, $pass);
         echo $login->cerrarConexion();
         $isLoged = false;

@@ -14,7 +14,7 @@ Class Register extends Conexion {
         $passwd;
         $modalidad;
         $rol = "user"; //POR DEFECTO
-
+        
         for($i = 0; $i < count($arrayDatosUser);$i++){
             if($i == 0){
                 $correo = $arrayDatosUser[$i];

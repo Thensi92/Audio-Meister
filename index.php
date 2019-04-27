@@ -2,9 +2,7 @@
     session_name('user');
     session_start();
 
-    /**
-     * CREAR ARRAYs PARA INSTANCIAR LOS DIFF CONTROLADORES
-     */
+    require_once("web/html/includes/arrayPOST/arrayPOST.php");
 
     //LINKS
     require_once("web/html/head/links/links.php");

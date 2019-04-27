@@ -1,6 +1,6 @@
 <?php
 
-require_once('app/controllers/productos/busquedaProductos.php');
+require_once('app/controllers/audios/busquedaAudios.php');
 
 ?>
 
