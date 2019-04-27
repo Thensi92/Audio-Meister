@@ -1,6 +1,6 @@
 <?php
 
-class Modelo {
+class Conexion {
 
     public $conexion;
 

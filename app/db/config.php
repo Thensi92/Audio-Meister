@@ -1,6 +1,6 @@
 <?php
 
-class Conexion{
+class Config{
     public static $metodoConexion = "localhost";
     public static $usuario = "root";
     public static $contraseña = "";
