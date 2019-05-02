@@ -15,7 +15,7 @@
         if(empty($_SESSION['datosUser'])){
             require_once("web/html/body/navbar/defaultNavBar.php");
         }else{
-            if($_SESSION['datosUser'][5] == "user"){
+            if($_SESSION['datosUser']['rol'] == "user"){
                 require_once("web/html/body/navbar/navBarUser.php");
             }else{
                 require_once("web/html/body/navbar/navBarAdm.php");
