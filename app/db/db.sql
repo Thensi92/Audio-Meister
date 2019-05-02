@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS Audios(
     nombre_audio VARCHAR(255),
     ruta_audio VARCHAR(255),
     ruta_imagen_audio VARCHAR(255),
-    duracion int,
+    duracion VARCHAR(255),
     fecha_subida TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     correo VARCHAR(255),
     id_tipo int,
