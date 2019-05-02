@@ -60,6 +60,6 @@
                 $url = $arrayDatos["rutaAudio"];
                 $nombre = $arrayDatos["nombre"];
             
-               echo " <a href='controllerDescarga.php?url=$url&nombre=$nombre'>Descargar</a>";
+            echo " <a href='index.php?ctl=descargaAudio&url=$url&nombre=$nombre'>Descargar</a>";
             ?>
 </section>
