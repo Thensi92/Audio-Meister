@@ -1,7 +1,7 @@
 <?php
 
 $arrayPOST = [
-    'registrar_usuario' => "app/controllers/Usuarios/LoginController.php"
+    'loged' => "app/controllers/Usuarios/LoginController.php"
 ];
 
 ?>
