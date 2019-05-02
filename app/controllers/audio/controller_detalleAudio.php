@@ -14,5 +14,5 @@
     $arrayDatos = $conexion->buscarAudio($idAudioDetalle);
     $conexion->cerrarConexion();
     //Vista de detalle con el reproductor
-    include "app/views/viewDetalleAudio.php";
+    include "app/views/audio/viewDetalleAudio.php";
 ?>

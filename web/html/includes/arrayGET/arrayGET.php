@@ -2,7 +2,7 @@
 
 $arrayGET = [
     'login' => "app/views/viewLogin/viewLogin.php",
-    'detalleAudio' => "app/controllers/controller_detalleAudio.php"
+    'detalleAudio' => "app/controllers/audio/controller_detalleAudio.php"
 ];
 
 ?>
