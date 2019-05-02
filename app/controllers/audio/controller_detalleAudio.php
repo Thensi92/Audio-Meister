@@ -3,7 +3,7 @@
     include "app/models/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
 
-    $idAudioDetalle = $_GET["idAudio"];
+    $idAudioDetalle = $_GET["id"];
 
     $metConexion = Config::$metodoConexion;
     $user= Config::$usuario;

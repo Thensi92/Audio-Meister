@@ -1,10 +1,10 @@
 <section>
        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="Poster1.png" >
+            <img class="card-img-top" src="web/html/body/img/Poster1.png" >
             <div class="card-body">
                     <div id="player">
                         <div id="buttons">
-                        <button id="play" onclick="playOrPauseSong()"><img src="Pause.png"/></button>
+                        <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png"/></button>
                     </div>
                     <div id="seek-bar">
                         <div id="fill"></div>
@@ -31,11 +31,11 @@
                     
                     if(song.paused){
                         song.play();
-                        $("#play img").attr("src","Pause.png");
+                        $("#play img").attr("src","web/html/body/img/Pause.png");
                     }
                     else{
                         song.pause();
-                        $("#play img").attr("src","Play.png");
+                        $("#play img").attr("src","web/html/body/img/Play.png");
                     }
                 }
                 
