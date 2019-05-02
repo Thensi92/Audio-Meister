@@ -3,10 +3,10 @@
 
         public function subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formato,$tamanio,$correoUser,$tipo){
             $tipoDefecto = "audio/mp3";
-            $rutaConst = "app/musica/";
+            $rutaConst = "web/musica/";
             $rutaDefinitiva = $rutaConst.$nArchivo;
             $tamanioMaximo = 16777216;
-            $rutaImagen = "web/html/img/Poster1.png";
+            $rutaImagen = "web/html/body/img/Poster1.png";
             $tipoCasteado = (int)$tipo;
 
             //Comprobacion del tipo de archivo subido
