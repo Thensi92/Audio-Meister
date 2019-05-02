@@ -1,32 +1,29 @@
 <?php
-
 require_once('app/controllers/audios/busquedaAudios.php');
-
 ?>
-
 
 <section>
 
-    <div id="contenedor">
-        <div class="card" style="width: 18rem;">
-            <img src="web/html/body/img/i.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card 1</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="web/html/body/img/i.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card 2</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+    <div id="view_product">
+            
+    <?php
+    foreach($model as $row) {
+        
+        echo '<div class="card" style="width: 18rem;">';
+        echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
+        
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">'.$row["nombre_audio"].'</h5>';
+        echo '<a href="index.php?ctl=detalleAudio&&id='.$row["id_audio"].'" class="btn btn-primary">Ver</a>';
+        echo '</div>';
+        
+        echo '</div>';
+    }
+    
+    ?>   
     </div>
-
+    
+    
     <?php
     echo "<center>";
         echo "<div>";
@@ -34,5 +31,5 @@ require_once('app/controllers/audios/busquedaAudios.php');
         echo "</div>";
     echo "</center>";
     ?>
-
+    
 </section>

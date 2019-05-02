@@ -6,6 +6,9 @@
     
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/main.css">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloCartaDetalle.css">
+    <link rel="stylesheet" type="text/js" media="screen" href="web/html/body/js/jquery-1.10.2.min.js">
+
     
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
