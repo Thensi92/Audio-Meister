@@ -55,14 +55,6 @@
             return $resultado;
         }
 
-        public function eliminarArchivoAudio($correoUser,$nombreCancion){
-             $sql = "DELETE FROM audios WHERE correo = ? AND nombre_audio = ?";
-             $resultado = $this->conexion->prepare($sql);
-             $resultado->bind_param("ss",$correoUser,$nombreCancion);
-             $resultado->execute();
-             return $resultado;
-        }
-
         public function buscarAudio($id){
             $sql = "SELECT * FROM audios WHERE id_audio = ?";
             $resultado = $this->conexion->prepare($sql);
@@ -83,6 +75,23 @@
             ];
 
             return $datosAudio;
+        }
+
+        public function borrarAudio($id,$correoUser,$url){
+            $sql = "DELETE FROM audios WHERE id_audio = ? AND correo= ?";
+            $resultado = $this->conexion->prepare($sql);
+            $resultado->bind_param("is",$id,$correoUser);
+            $resultado->execute();
+            if($resultado->affected_rows == 1){
+                if(unlink($url)){
+                    $mensaje = "Exito";
+                }else{
+                    $mensaje = "Fallo en borrado de archivo en PC";
+                }
+            }else{
+                $mensaje = "Fallo"; 
+            }
+            return $mensaje;
         }
 
     }
