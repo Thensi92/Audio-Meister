@@ -1,7 +1,7 @@
 <?php
 
 $arrayPOST = [
-    'loged' => "app/controllers/Usuarios/LoginController.php"
+    'procesar_login' => "app/controllers/Usuarios/LoginController.php"
 ];
 
 ?>

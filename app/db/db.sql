@@ -32,6 +32,22 @@ CREATE TABLE IF NOT EXISTS Audios(
     CONSTRAINT fk_id_tipo FOREIGN KEY (id_tipo) REFERENCES Tipos(id_tipo)
 );
 
-INSERT INTO Tipos VALUES(1,'Podcast');
-INSERT INTO Tipos VALUES(2,'NotaAudio');
-INSERT INTO Tipos VALUES(3,'Musica');
+INSERT INTO tipos VALUES(1,'Podcast');
+INSERT INTO tipos VALUES(2,'NotaAudio');
+INSERT INTO tipos VALUES(3,'Musica');
+
+INSERT INTO audios (
+    nombre_audio,
+    ruta_audio,
+    ruta_imagen_audio,
+    duracion,
+    correo,
+    id_tipo
+    ) VALUES (
+        'Miracle-02',
+        'web/musica/02-Miracle.mp3',
+        'web/html/body/img/Poster1.png',
+        '05:09',
+        'a@a',
+        '3'
+    );
