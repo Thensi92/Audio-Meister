@@ -1,6 +1,6 @@
 <?php
     include "app/db/config.php";
-    include "app/models/model_conexion_BBDD.php";
+    include "app/models/conexion/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
 
     $idAudioDetalle = $_GET["id"];
@@ -14,5 +14,5 @@
     $arrayDatos = $conexion->buscarAudio($idAudioDetalle);
     $conexion->cerrarConexion();
     //Vista de detalle con el reproductor
-    include "viewDetalleAudio.php";
+    include "app/views/audio/viewDetalleAudio.php";
 ?>

@@ -1,5 +1,5 @@
 <section>
-    <form id="form_login" action="index.php?ctl=MZZ9550" method="POST">
+    <form action="index.php?ctl=procesar_login" method="POST">
         <fieldset>
             <legend>Inicio de sesión</legend>
             <div class="form-group">
@@ -10,7 +10,7 @@
                 <label for="pass">Contraseña</label>
                 <input type="password" class="form-control" name="pass" id="pass" required>
             </div>
-            <input class="btn btn-primary" type="submit" name= "loged" value="Iniciar">
+            <input class="btn btn-primary" type="submit" name= "procesar_login" value="Iniciar">
         </fieldset>
     </form>
 </section>
