@@ -2,6 +2,7 @@
 
 require_once("app/db/config.php");
 require_once("app/models/conexion/model_conexion_BBDD.php");
+require_once("app/models/conexion/model_class_login.php");
 require_once("app/models/conexion/model_class_register.php");
 
 $host = Config::$metodoConexion;
@@ -9,7 +10,8 @@ $usu = Config::$usuario;
 $pass = Config::$contraseña;
 $db = Config::$nombreBaseDatos;
 
-$conexion = new Register($host,$usu,$pass,$db);
+$registro = new Register($host,$usu,$pass,$db);
+$login = new Login($host,$usu,$pass,$db);
 
 $correo = $_POST['correo'];
 $nombre = $_POST['nombre'];
@@ -26,9 +28,13 @@ $arrayDatosUser = array(
     $modalidad
 );
 
-$conexion->registarUsuario($arrayDatosUser);
-$conexion->cerrarConexion();
+$registro->registarUsuario($arrayDatosUser);
+$registro->cerrarConexion();
 
-header("Location:index.php");
+$_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
+
+if(isset($_SESSION['datosUser']['correo'])){
+    header("Location:index.php");
+}
 
 ?>
