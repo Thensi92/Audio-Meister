@@ -1,4 +1,4 @@
-<form id="form_register_user" action="index.php?ctl=registrando" method="POST">
+<form id="form_register_user" action="index.php?ctl=null" method="POST">
     <fieldset>
         <legend>Registro de nuevo usuario</legend>
         <div class="form-group">
@@ -17,13 +17,13 @@
         </div>
 
         <div class="form-group">
-            <label for="fechaNacimiento">Fecha de nacimiento:</label>
-            <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento" required>
+            <label for="pass">Contraseña</label>
+            <input type="password" class="form-control" name="pass" id="pass" required>
         </div>
 
         <div class="form-group">
-            <label for="pass">Contraseña</label>
-            <input type="password" class="form-control" name="pass" id="pass" required>
+            <label for="modalidad">Modalidad:</label>
+            <input type="text" class="form-control" name="modalidad" id="modalidad" required>
         </div>
 
         <input type="submit" class="btn btn-primary" name="registrar_usuario" value="Registrar usuario">

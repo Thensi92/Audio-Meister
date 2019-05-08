@@ -9,7 +9,13 @@
     $passwd = $_POST['pass'];
         
     $_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
-    header("Location:index.php");
+    
+    if(isset($_SESSION['datosUser']['correo'])){
+        header("Location:index.php");
+    }else {
+        require_once("app/views/mensajes_error/errorLogin.php");
+    }
     
     $login->cerrarConexion();
+    
 ?>
