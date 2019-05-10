@@ -8,3 +8,21 @@
 #logo{
     width: 50px;
 }
+
+#podcast{
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#musica{
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.limpiar{
+    clear: both;
+}
