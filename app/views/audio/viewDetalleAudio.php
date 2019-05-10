@@ -13,7 +13,6 @@
             </div>
         </div>
             <script type="text/javascript">
-
                 var songTitle = document.getElementById("songTitle");
                 var fillBar = document.getElementById("fill");
                 
@@ -60,6 +59,6 @@
                 $url = $arrayDatos["rutaAudio"];
                 $nombre = $arrayDatos["nombre"];
             
-               echo " <a href='controllerDescarga.php?url=$url&nombre=$nombre'>Descargar</a>";
+            echo " <a href='index.php?ctl=descargaAudio&url=$url&nombre=$nombre'>Descargar</a>";
             ?>
 </section>
