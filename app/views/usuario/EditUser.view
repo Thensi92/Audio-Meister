@@ -1,4 +1,4 @@
-<form id="form_edit_user" action="index.php?ctl=editando" method="POST">
+<form id="form_edit_user" action="index.php?ctl=editUser" method="POST">
     <fieldset>
         <legend>Editar datos de usuario</legend>
 
