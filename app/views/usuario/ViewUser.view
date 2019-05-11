@@ -1,0 +1,16 @@
+<div id="datos_usuario">
+    <ul>
+        <li>Dirección de correo electrónico: <?=$_SESSION['datosUser']['correo']?></li>
+        <li>Nombre: <?=$_SESSION['datosUser']['nombre']?></li>
+        <li>Fecha de nacimiento: <?=$_SESSION['datosUser']['fechaNacimiento']?></li>
+        <li>Contraseña: <?=$_SESSION['datosUser']['passwd']?></li>
+        <?php
+            if($_SESSION['datosUser']['rol'] == "admin"){
+                echo "<li>Perfil de usuario: ".$_SESSION['datosUser']['rol'].'</li>';
+            }
+        ?>
+    </ul>
+
+    <a href="index.php?ctl=editUser"><button type="button" class="btn btn-info">Editar perfil</button></a>
+    <a href="index.php?ctl=delUser"><button type="button" class="btn btn-danger">Eliminar cuenta</button></a>
+</div>

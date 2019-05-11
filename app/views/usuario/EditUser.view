@@ -1,0 +1,29 @@
+<form id="form_edit_user" action="index.php?ctl=editando" method="POST">
+    <fieldset>
+        <legend>Editar datos de usuario</legend>
+
+        <div class="form-group">
+            <label for="correo">Correo</label><br>
+            <input type="email" class="form-control" name="correo" id="correo" value="<?=$_SESSION['datosUser']['correo']?>" required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre o apodo</label><br>
+            <input type="text" class="form-control" name="nombre" id="nombre" value="<?=$_SESSION['datosUser']['nombre']?>" required><br>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de nacimiento:</label><br>
+            <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento" value="<?=$_SESSION['datosUser']['fechaNacimiento']?>" required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="pass">Contraseña</label><br>
+            <input type="password" class="form-control" name="passwd" id="passwd" value="<?=$_SESSION['datosUser']['passwd']?>" required><br><br>
+        </div>
+
+        <input type="submit" class="btn btn-primary" name="editar_usuario" value="Aceptar">
+    
+    </fieldset>
+</form>
