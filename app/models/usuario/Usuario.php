@@ -12,7 +12,6 @@
             //DEVOLVER DATOS DE USUARIO
             $stmt = $this->conexion->conexion->prepare(
                 "SELECT * FROM usuarios WHERE correo = ? AND passwd = ?");
-            )
 
             if($stmt){
                 $stmt->bind_param("ss", $correo, $passwd);
