@@ -19,12 +19,12 @@
                 }
             }
 
-            if($usuario->editarDatos($oldEmail, $oldPasswd, $nuevosDatos)){
+            if($usuario->modificarDatos($oldEmail, $oldPasswd, $nuevosDatos)){
                 
                 //pasar los datos a la variable $_SESSION
                 $newEmail = $nuevosDatos["correo"];
                 $newPasswd = $nuevosDatos["passwd"];
-                $datosUsuario = $usuario->getUsuario($newEmail, $newPasswd);
+                $datosUsuario = $usuario->getDatos($newEmail, $newPasswd);
                 
                 $_SESSION['datosUser'] = $datosUsuario;
                 $usuario->cerrarConexion();
