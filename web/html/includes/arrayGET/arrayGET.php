@@ -7,9 +7,9 @@ $arrayGET = [
     'procesar_login' => "app/controllers/Usuarios/LoginController.php",
     'detalleAudio' => "app/controllers/audio/controller_detalleAudio.php",
     'descargaAudio' => "app/controllers/audio/controllerDescarga.php",
-    'viewUser' => "app/controllers/Usuarios/ViewUserController.php",
-    'editUser' => "app/controllers/Usuarios/EditUserController.php",
-    'delUser' => "app/controllers/Usuarios/DeleteUserController.php"
+    'viewUser' => "app/controllers/Usuarios/funciones_usuario/ViewUserController.php",
+    'editUser' => "app/controllers/Usuarios/funciones_usuario/EditUserController.php",
+    'delUser' => "app/controllers/Usuarios/funciones_usuario/DeleteUserController.php"
 ];
 
 ?>
