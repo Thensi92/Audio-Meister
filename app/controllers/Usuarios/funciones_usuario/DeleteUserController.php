@@ -8,7 +8,7 @@
     $pass = $_SESSION["datosUser"]["passwd"];
     $eliminado = false;
 
-    $conectionUser = new Usuario(ConfigDB::$host, ConfigDB::$user, ConfigDB::$pass, ConfigDB::$nameDb);
+    $conectionUser = new Usuario(Config::$metodoConexion, Config::$usuario, Config::$contraseña, Config::$nombreBaseDatos);
     
     if($conectionUser->eliminarUsuario($correo, $pass)){
         $eliminado = true;

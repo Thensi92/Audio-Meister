@@ -4,7 +4,7 @@
         require_once("app/models/conexion/model_conexion_BBDD.php");
         require_once("app/models/usuario/Usuario.php");
 
-        $usuario = new Usuario(Config::$host, Config::$user, Config::$pass, Config::$nameDb);
+        $usuario = new Usuario(Config::$metodoConexion, Config::$usuario, Config::$contraseña, Config::$nombreBaseDatos);
         $oldEmail = $_SESSION["datosUser"]["correo"];
         $oldPasswd= $_SESSION["datosUser"]["passwd"];
         
