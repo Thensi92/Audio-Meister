@@ -30,13 +30,13 @@
             
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
             if($oldEmail==$nuevosDatos["correo"]){
-                $stmt = $this->conexion->getConexion()->prepare(
+                $stmt = $this->conexion->conexion->prepare(
                     "UPDATE usuarios SET
                     nombre = ?, apodo = ?, passwd = ?,
                     modalidad = ? 
                     WHERE correo = ? AND passwd = ?");
             }else{
-                $stmt = $this->conexion->getConexion()->prepare(
+                $stmt = $this->conexion->conexion->prepare(
                     "UPDATE usuarios SET correo = ? ,
                     nombre = ?, apodo = ?, passwd = ?,
                     modalidad = ? 
@@ -65,7 +65,7 @@
 
         public function eliminarUsuario($correo, $passwd){
             $usuarioEliminado = false;
-            $stmt = $this->conexion->getConexion()->prepare(
+            $stmt = $this->conexion->conexion->prepare(
                 "DELETE FROM usuarios WHERE correo = ? AND passwd = ?"
             );
             
