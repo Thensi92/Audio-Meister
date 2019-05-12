@@ -8,14 +8,20 @@
         </div>
 
         <div class="form-group">
-            <label for="nombre">Nombre o apodo</label><br>
+            <label for="nombre">Nombre</label><br>
             <input type="text" class="form-control" name="nombre" id="nombre" value="<?=$_SESSION['datosUser']['nombre']?>" required><br>
             
         </div>
 
         <div class="form-group">
-            <label for="fechaNacimiento">Fecha de nacimiento:</label><br>
-            <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento" value="<?=$_SESSION['datosUser']['fechaNacimiento']?>" required><br>
+            <label for="apodo">Apodo</label><br>
+            <input type="text" class="form-control" name="apodo" id="apodo" value="<?=$_SESSION['datosUser']['apodo']?>" required><br>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="m0odalidad">Modalidad:</label><br>
+            <input type="date" class="form-control" name="modalidad" id="modalidad" value="<?=$_SESSION['datosUser']['modalidad']?>" disable><br>
         </div>
 
         <div class="form-group">
