@@ -79,5 +79,9 @@
             }
             return $usuarioEliminado;
         }
+
+        public function cerrarConexion(){
+            $this->conexion.close();
+        }
     }
 ?>
