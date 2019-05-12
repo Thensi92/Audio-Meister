@@ -21,7 +21,7 @@
 
         <div class="form-group">
             <label for="modalidad">Modalidad:</label><br>
-            <input type="text" class="form-control" name="modalidad" id="modalidad" value="<?=$_SESSION['datosUser']['modalidad']?>" disabled><br>
+            <input type="text" class="form-control" name="modalidad" id="modalidad" value="<?=$_SESSION['datosUser']['modalidad']?>" required><br>
         </div>
 
         <div class="form-group">
