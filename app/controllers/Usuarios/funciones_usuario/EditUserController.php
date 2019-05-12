@@ -1,5 +1,5 @@
 <?php
-    if(!empty($_SESSION['user'])){
+    if(!empty($_SESSION['datosUser'])){
         require_once("app/db/config.php");
         require_once("app/models/conexion/model_conexion_BBDD.php");
         require_once("app/models/usuario/Usuario.php");
