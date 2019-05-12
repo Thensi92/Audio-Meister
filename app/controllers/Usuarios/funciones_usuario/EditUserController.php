@@ -19,7 +19,7 @@
                 }
             }
 
-            if($usuario->modificarDatos($oldEmail, $oldPasswd, $nuevosDatos)){
+            if($usuario->modificarUsuario($oldEmail, $oldPasswd, $nuevosDatos)){
                 
                 //pasar los datos a la variable $_SESSION
                 $newEmail = $nuevosDatos["correo"];
