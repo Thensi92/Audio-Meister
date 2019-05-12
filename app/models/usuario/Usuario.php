@@ -81,7 +81,7 @@
         }
 
         public function cerrarConexion(){
-            $this->conexion.close();
+            $this->conexion->close();
         }
     }
 ?>
