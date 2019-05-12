@@ -19,7 +19,7 @@
     if($eliminado){
         $mensaje = 'Se ha eliminado con éxito.</a>';
         unset($_POST);
-        header("Location: app\controllers\Usuarios\desconectarController.php");
+        header("Location: index.php?ctl=desconectar");
     }else{
         $mensaje = "Error: No se ha podido eliminar. Por favor, inténtelo de nuevo";
         //Vista
