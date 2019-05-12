@@ -16,4 +16,6 @@
 
     $mensaje = $conexion->borrarAudio($idAudio,$correoUser,$ruta);
     echo $mensaje;
+    unset($_SESSION["audioBorrar"]);
+    header("Location:index.php?ctl=verOwnAudios");
 ?>

@@ -11,16 +11,15 @@
 
     $conexion = new Audio($metConexion,$user,$contra,$nombreBD);
 
-    //Hacer comprobacion de que los campos esten llenos
-
     $nombre=$_POST["nombreAudio"];
     $formatoArchivo = $_FILES["archivoAudio"]["type"];
     $tamañoArchivo = $_FILES["archivoAudio"]["size"];
     $rutaTemporal = $_FILES["archivoAudio"]["tmp_name"];
-    $correoUser = 'ejemplo@gmail.com';
+    $correoUser = $_SESSION["datosUser"]["correo"];
     $tipoArchivo = $_POST["tipoAudio"];
     $nArchivo= $_FILES['archivoAudio']['name'];
 
     $resultado = $conexion->subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$correoUser,$tipoArchivo);
     $conexion->cerrarConexion();
+    echo "$resultado";
 ?>
