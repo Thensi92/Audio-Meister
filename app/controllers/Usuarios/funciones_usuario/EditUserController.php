@@ -30,7 +30,7 @@
                 $usuario->cerrarConexion();
             }
             
-            header("Location: index.php?ctl=perfil");
+            header("Location: index.php?ctl=viewUser");
         }else{
             //CARGAR VISTA
             require_once("app/views/usuario/EditUser.view");
