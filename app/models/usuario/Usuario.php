@@ -70,7 +70,7 @@
             );
             
             if($stmt){
-                $stmt->bind_param("ss", $correo, $pass);
+                $stmt->bind_param("ss", $correo, $passwd);
                 $stmt->execute();
                 if($stmt->affected_rows == 1){
                     $usuarioEliminado = true;
