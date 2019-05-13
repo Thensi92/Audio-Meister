@@ -29,7 +29,7 @@ require_once('app/controllers/audios/indexViewController.php');
     }
 
     echo '<div id="voz">';
-    foreach($musica as $row){
+    foreach($voz as $row){
         echo '<div class="card" style="width: 18rem;">';
         echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
                     
