@@ -1,5 +1,5 @@
 <section>
-        <form action="controllerSubidaAudio.php" method="post" enctype="multipart/form-data">
+        <form action="index.php?ctl=insertar_audio&tipoOperacion=añadir" method="post" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label for="nombreAudio">Nombre Audio</label>
@@ -16,13 +16,6 @@
                     <option value="3">Musica</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Subir</button>
+            <button type="submit" name="insertar_audio" class="btn btn-primary">Subir</button>
         </form>
-            <?php
-        
-        if(isset($_SESSION["mensaje"])){
-            $mensaje=$_SESSION["mensaje"];
-            echo("<script type='text/javascript'>alert('$mensaje'); </script>"); 
-        }
-    ?>
 </section>
