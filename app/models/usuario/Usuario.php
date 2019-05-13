@@ -12,7 +12,6 @@
             //DEVOLVER DATOS DE USUARIO
             $stmt = $this->conexion->conexion->prepare(
                 "SELECT * FROM usuarios WHERE correo = ? AND passwd = ?");
-            )
 
             if($stmt){
                 $stmt->bind_param("ss", $correo, $passwd);
@@ -31,29 +30,29 @@
             
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
             if($oldEmail==$nuevosDatos["correo"]){
-                $stmt = $this->conexion->getConexion()->prepare(
+                $stmt = $this->conexion->conexion->prepare(
                     "UPDATE usuarios SET
-                    nombre = ?, apodo = ?, edad = ?,
-                    passwd = ? 
+                    nombre = ?, apodo = ?, passwd = ?,
+                    modalidad = ? 
                     WHERE correo = ? AND passwd = ?");
             }else{
-                $stmt = $this->conexion->getConexion()->prepare(
+                $stmt = $this->conexion->conexion->prepare(
                     "UPDATE usuarios SET correo = ? ,
-                    nombre = ?, apodo = ?, edad = ?,
-                    passwd = ? 
+                    nombre = ?, apodo = ?, passwd = ?,
+                    modalidad = ? 
                     WHERE correo = ? AND passwd = ?");
             }
             
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
             if($stmt){
                 if($oldEmail==$nuevosDatos["correo"]){
-                    $stmt->bind_param("ssisss", $nuevosDatos["nombre"],
-                    $nuevosDatos["apodo"], $nuevosDatos["edad"],
-                    $nuevosDatos["passwd"], $oldEmail, $oldPasswd);
+                    $stmt->bind_param("ssssss", $nuevosDatos["nombre"],
+                    $nuevosDatos["apodo"], $nuevosDatos["passwd"],
+                    $nuevosDatos["modalidad"], $oldEmail, $oldPasswd);
                 }else{
-                    $stmt->bind_param("sssisss", $nuevosDatos["correo"], $nuevosDatos["nombre"],
-                    $nuevosDatos["apodo"], $nuevosDatos["edad"],
-                    $nuevosDatos["passwd"], $oldEmail, $oldPasswd);
+                    $stmt->bind_param("sssssss", $nuevosDatos["correo"], $nuevosDatos["nombre"],
+                    $nuevosDatos["apodo"], $nuevosDatos["passwd"],
+                    $nuevosDatos["modalidad"], $oldEmail, $oldPasswd);
                 }
                 //print_r($nuevosDatos);
                 $stmt->execute();
@@ -66,12 +65,12 @@
 
         public function eliminarUsuario($correo, $passwd){
             $usuarioEliminado = false;
-            $stmt = $this->conexion->getConexion()->prepare(
+            $stmt = $this->conexion->conexion->prepare(
                 "DELETE FROM usuarios WHERE correo = ? AND passwd = ?"
             );
             
             if($stmt){
-                $stmt->bind_param("ss", $correo, $pass);
+                $stmt->bind_param("ss", $correo, $passwd);
                 $stmt->execute();
                 if($stmt->affected_rows == 1){
                     $usuarioEliminado = true;
@@ -79,6 +78,10 @@
                 $stmt->close();
             }
             return $usuarioEliminado;
+        }
+
+        public function cerrarConexion(){
+            $this->conexion->cerrarConexion();
         }
     }
 ?>
