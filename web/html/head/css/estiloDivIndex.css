@@ -1,0 +1,24 @@
+#view_product{
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto auto;
+    width: 85%;
+    align-items: center;
+    
+}
+
+.posicionamientoFlexible{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.card{
+    margin-bottom: 10px;
+}
+
+.titulos_generos{
+    border: 2px solid red;
+    margin-top: 5px;
+}

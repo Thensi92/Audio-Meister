@@ -12,6 +12,10 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link" href="index.php?ctl=viewUser">Perfil</a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link" href="index.php?ctl=desconectar">Desconectar</a>
       </li>
 
