@@ -13,7 +13,6 @@
             </div>
         </div>
             <script type="text/javascript">
-
                 var songTitle = document.getElementById("songTitle");
                 var fillBar = document.getElementById("fill");
                 

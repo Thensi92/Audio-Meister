@@ -3,6 +3,7 @@
     include "app/models/conexion/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
     $idAudioDetalle = $_GET["id"];
+
     $metConexion = Config::$metodoConexion;
     $user= Config::$usuario;
     $contra = Config::$contraseña;
@@ -10,6 +11,12 @@
     $conexion = new Audio($metConexion,$user,$contra,$nombreBD);
     $arrayDatos = $conexion->buscarAudio($idAudioDetalle);
     $conexion->cerrarConexion();
-    //Vista de detalle con el reproductor
-    include "app/views/audio/viewDetalleAudio.php";
+
+    
+    $_SESSION["audioBorrar"]["idAudio"] = $arrayDatos["id"];
+    $_SESSION["audioBorrar"]["propietarioAudio"] = $arrayDatos["correoUsuario"] ;
+    $_SESSION["audioBorrar"]["ruta"] = $arrayDatos["rutaAudio"] ;
+
+    include "apps/views/audio/viewFrmEditar.php";
+   
 ?>

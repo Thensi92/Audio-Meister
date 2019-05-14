@@ -94,5 +94,64 @@
             return $mensaje;
         }
 
+        public function editarAudio($id,$nombre,$correoUser,$tipo,$modificarAudio,$nArchivo,$rutaTemporal,$formato,$tamanio){
+            $tipoDefecto = "audio/mp3";
+            $rutaConst = "musica/";
+            $rutaDefinitiva = $rutaConst.$nArchivo;
+            $tamanioMaximo = 16777216;
+            $rutaImagen = "web/html/img/Poster1.png";
+            $tipoCasteado = (int)$tipo;
+
+            if($modificarAudio)
+            {  
+                if($formato == $tipoDefecto){
+
+                    if($tamanio > $tamanioMaximo){
+                        $mensaje = "Has superado el tamaño permitido"; 
+                        $caja = $this->hacerMensajeError($mensaje);
+                    }else{
+                            if(move_uploaded_file($rutaTemporal,$rutaDefinitiva)){
+                                 //Llamas a la libreria para sacar la duracion de la cancion
+                                 $filename =$rutaDefinitiva;
+                                 $getID3 = new getID3;
+                                 $file = $getID3->analyze($filename); 
+                                 $playtime_seconds = $file['playtime_seconds'];
+                                 $duracion = gmdate("H:i:s",$playtime_seconds);
+
+                                 $sql ="UPDATE  audios SET nombre_audio = ? , ruta_audio = ?, ruta_imagen_audio = ?, duracion =? , id_tipo=? WHERE correo = ? AND id_audio = ?";
+                                 $resultado = $this->conexion->prepare($sql);
+                                 $resultado->bind_param("ssssisi",$nombre,$rutaDefinitiva,$rutaImagen,$duracion,$tipoCasteado,$correoUser,$id);
+                                 $resultado->execute();
+                                
+                                 if($resultado->affected_rows == 1){
+                                    $mensaje = "Exito"; 
+                                 }else{
+                                   $mensaje = "Fallo en la subida del archivo"; 
+                                 }
+
+                                 
+                            }else{
+                                $mensaje = "Fallo al mover el fichero"; 
+                            }
+                    }
+
+                }else{
+                    $mensaje = "No has subido un archivo mp3, o nada";
+                }
+            }else{
+                $sql = "UPDATE audios SET nombre_audio = ? , id_tipo = ? WHERE correo = ? AND id_audio = ?";
+                $resultado = $this->conexion->prepare($sql);
+                $resultado->bind_param("sisi",$nombre,$tipoCasteado,$correoUser,$id);
+                $resultado->execute();
+
+                if($resultado->affected_rows == 1){
+                    $mensaje = "Exito"; 
+                 }else{
+                   $mensaje = "Fallo en la subida del archivo"; 
+                 }
+            }
+            return $mensaje;
+        }
+
     }
 ?>
