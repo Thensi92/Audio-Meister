@@ -1,5 +1,4 @@
 #view_product{
-    border: 1px solid black;
     display: flex;
     flex-flow: column wrap;
     margin: auto auto;
@@ -12,8 +11,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    margin-top: 10px;
+}
+
+.card{
+    margin-bottom: 10px;
 }
 
 .titulos_generos{
-    border: 2px solid red;    
+    border: 2px solid red;
+    margin-top: 5px;
 }
