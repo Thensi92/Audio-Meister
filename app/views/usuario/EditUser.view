@@ -1,0 +1,35 @@
+<form id="form_edit_user" action="index.php?ctl=editUser" method="POST">
+    <fieldset>
+        <legend>Editar datos de usuario</legend>
+
+        <div class="form-group">
+            <label for="correo">Correo</label><br>
+            <input type="email" class="form-control" name="correo" id="correo" value="<?=$_SESSION['datosUser']['correo']?>" required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label><br>
+            <input type="text" class="form-control" name="nombre" id="nombre" value="<?=$_SESSION['datosUser']['nombre']?>" required><br>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="apodo">Apodo</label><br>
+            <input type="text" class="form-control" name="apodo" id="apodo" value="<?=$_SESSION['datosUser']['apodo']?>" required><br>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="modalidad">Modalidad:</label><br>
+            <input type="text" class="form-control" name="modalidad" id="modalidad" value="<?=$_SESSION['datosUser']['modalidad']?>" required><br>
+        </div>
+
+        <div class="form-group">
+            <label for="pass">Contraseña</label><br>
+            <input type="password" class="form-control" name="passwd" id="passwd" value="<?=$_SESSION['datosUser']['passwd']?>" required><br><br>
+        </div>
+
+        <input type="submit" class="btn btn-primary" name="editar_usuario" value="Aceptar">
+    
+    </fieldset>
+</form>
