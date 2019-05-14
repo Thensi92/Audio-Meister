@@ -10,7 +10,7 @@ require_once('app/controllers/audios/indexViewController.php');
         echo '<div class="titulos_generos">Podcast</div>';
     }
 
-    echo '<div id="podcast">';
+    echo '<div id="podcast" class="posicionamientoFlexible">';
     foreach($podcast as $row){
         echo '<div class="card" style="width: 18rem;">';
         echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
@@ -28,7 +28,7 @@ require_once('app/controllers/audios/indexViewController.php');
         echo '<div class="titulos_generos">Voz</div>';
     }
 
-    echo '<div id="voz">';
+    echo '<div id="voz" class="posicionamientoFlexible">';
     foreach($voz as $row){
         echo '<div class="card" style="width: 18rem;">';
         echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
@@ -46,7 +46,7 @@ require_once('app/controllers/audios/indexViewController.php');
         echo '<div class="titulos_generos">Musica</div>';
     }
 
-    echo '<div id="musica">';
+    echo '<div id="musica" class="posicionamientoFlexible">';
     foreach($musica as $row){
         echo '<div class="card" style="width: 18rem;">';
         echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
