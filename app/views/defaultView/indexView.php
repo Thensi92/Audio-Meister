@@ -7,7 +7,7 @@ require_once('app/controllers/audios/indexViewController.php');
     
     <?php
     if(!empty($podcast)) {
-        echo '<div>Podcast</div>';
+        echo '<div class="titulos_generos">Podcast</div>';
     }
 
     echo '<div id="podcast">';
@@ -25,7 +25,7 @@ require_once('app/controllers/audios/indexViewController.php');
     echo '</div>';
 
     if(!empty($voz)) {
-        echo '<div>Voz</div>';
+        echo '<div class="titulos_generos">Voz</div>';
     }
 
     echo '<div id="voz">';
@@ -43,7 +43,7 @@ require_once('app/controllers/audios/indexViewController.php');
     echo '</div>';
 
     if(!empty($musica)) {
-        echo '<div>Musica</div>';
+        echo '<div class="titulos_generos">Musica</div>';
     }
 
     echo '<div id="musica">';

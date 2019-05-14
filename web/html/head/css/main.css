@@ -8,35 +8,3 @@
 #logo{
     width: 50px;
 }
-
-#podcast{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-#voz{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-#musica{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-#view_product{
-    border: 1px solid black;
-    display: flex;
-    flex-flow: column wrap;
-    margin: auto auto;
-    width: 85%;
-    align-items: center;
-    
-}
-
-.limpiar{
-    clear: both;
-}
