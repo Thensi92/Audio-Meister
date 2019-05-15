@@ -1,4 +1,4 @@
-<form id="form_register_user" action="index.php?ctl=null" method="POST">
+<form id="form" action="index.php?ctl=null" method="POST">
     <fieldset>
         <legend>Registro de nuevo usuario</legend>
         <div class="form-group">
