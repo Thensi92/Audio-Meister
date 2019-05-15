@@ -3,6 +3,7 @@
 
         public function subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formato,$tamanio,$correoUser,$tipo){
             $tipoDefecto = "audio/mp3";
+            $tipoDefecto2 = "audio/mpeg";
             $rutaConst = "web/musica/";
             $rutaDefinitiva = $rutaConst.$nArchivo;
             $tamanioMaximo = 16777216;
@@ -10,7 +11,7 @@
             $tipoCasteado = (int)$tipo;
 
             //Comprobacion del tipo de archivo subido
-            if($formato == $tipoDefecto){
+            if($formato == $tipoDefecto || $formato == $tipoDefecto2){
                     if($tamanio > $tamanioMaximo){
                         $mensaje = "Has superado el tamaño permitido"; 
                         $caja = $this->hacerMensajeError($mensaje);
