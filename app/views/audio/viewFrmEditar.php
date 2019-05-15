@@ -5,7 +5,7 @@
                 obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
             }
     </script>
-   <form action="index.php?ctl=editar_audio&id=<?=$arrayDatos["id"]?>" method="POST" enctype="multipart/form-data">>
+   <form action="index.php?ctl=editar_audio&id=<?=$arrayDatos["id"]?>" method="POST" enctype="multipart/form-data">
         <div class="form-group">
                     <label for="nombreAudio">Nombre Audio</label>
                     <input type="text" class="form-control" id="nombreAudio" name="nombreAudio" value="<?=$arrayDatos["nombre"]?>" required>
@@ -40,7 +40,7 @@
                         
                         
                     </select>
-                    <button type="submit" name="insertar_audio" class="btn btn-primary">Editar</button>
+                    <button type="submit" name="editar_audio" class="btn btn-primary">Editar</button>
                 </div>
                 <a class="btn btn-danger" href="index.php?ctl=eliminarAudio" role="button">Borrar</a>
 </section>

@@ -17,6 +17,6 @@
     $_SESSION["audioBorrar"]["propietarioAudio"] = $arrayDatos["correoUsuario"] ;
     $_SESSION["audioBorrar"]["ruta"] = $arrayDatos["rutaAudio"] ;
 
-    include "apps/views/audio/viewFrmEditar.php";
+    include "app/views/audio/viewFrmEditar.php";
    
 ?>

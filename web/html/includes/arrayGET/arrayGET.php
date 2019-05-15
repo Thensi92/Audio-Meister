@@ -12,6 +12,7 @@ $arrayGET = [
     'delUser' => "app/controllers/Usuarios/funciones_usuario/DeleteUserController.php",
     'ver_frmSubida' => "app/views/audio/viewFormularioSubida.php",
     'verOwnAudios' => "app/controllers/audio/controller_listarOwnAudios.php",
+    'frmEditar' => "app/controllers/audio/controllerFrmEditar.php",
     'eliminarAudio' => "app/controllers/audio/controllerBorrarAudio.php",
     'podcast' => "app/controllers/audios/filterControllerPodcast.php",
     'voz' => "app/controllers/audios/filterControllerVoz.php",

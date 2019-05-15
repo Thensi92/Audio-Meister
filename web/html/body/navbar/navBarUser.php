@@ -28,6 +28,17 @@ require_once("app/controllers/audios/busquedaAudios.php");
           <a class="dropdown-item" href="index.php?ctl=verOwnAudios">Mis Audios</a>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Generos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.php?ctl=musica">Musica</a>
+          <a class="dropdown-item" href="index.php?ctl=voz">Notas de Audio</a>
+          <a class="dropdown-item" href="index.php?ctl=podcast">Podcast</a>
+        </div>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="index.php?ctl=desconectar">Desconectar</a>
       </li>
