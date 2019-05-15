@@ -4,7 +4,6 @@
     margin: auto auto;
     width: 85%;
     align-items: center;
-    
 }
 
 .posicionamientoFlexible{
@@ -21,4 +20,8 @@
 .titulos_generos{
     border: 2px solid red;
     margin-top: 5px;
+}
+
+.pag{
+    margin-top: 50px;
 }
