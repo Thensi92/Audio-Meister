@@ -14,7 +14,7 @@
     $pagination = new PDO_Pagination($conexion);
 
     $pagination->rowCount("SELECT * FROM audios");
-    $pagination->config(3, 3);
+    $pagination->config(1, 99);
     
     $sql = "SELECT * FROM audios WHERE correo = '$correo' ORDER BY id_audio ASC LIMIT $pagination->start_row, $pagination->max_rows";
     $query = $conexion->prepare($sql);
