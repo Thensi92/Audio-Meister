@@ -23,7 +23,10 @@
 
         <div class="form-group">
             <label for="modalidad">Modalidad:</label>
-            <input type="text" class="form-control" name="modalidad" id="modalidad" required>
+            <select class="custom-select form-control" name="modalidad" id="modalidad" required>
+                <option value="Free" selected>Free</option>
+                <option value="Premium">Premium</option>
+            </select>
         </div>
 
         <input type="submit" class="btn btn-primary" name="registrar_usuario" value="Registrar usuario">
