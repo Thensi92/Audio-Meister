@@ -35,3 +35,14 @@ CREATE TABLE IF NOT EXISTS Audios(
 INSERT INTO tipos VALUES(1,'Podcast');
 INSERT INTO tipos VALUES(2,'NotaAudio');
 INSERT INTO tipos VALUES(3,'Musica');
+
+INSERT INTO `usuarios` (
+    `correo`, 
+    `nombre`, 
+    `apodo`, 
+    `passwd`, 
+    `modalidad`, 
+    `rol`) VALUES (
+        'adm@adm', 
+        'Admin', 'adm', 'adm', 'Premium', 'admin'
+        );
