@@ -1,16 +1,12 @@
 <?php
-
-class Modelo {
-
+class Conexion{
     public $conexion;
-
     function __construct($host,$usu,$pass,$db){
         $this->conexion = new mysqli($host,$usu,$pass,$db);
         if($this->conexion->connect_error){
             die('Error de Conexion ('.$conexion->connect_errno.')'.$conexion->connect_error);
         }
     }
-
     public function comprobarCampos($array){
         $estaVacio = false;
         $indice = 0;
@@ -25,7 +21,6 @@ class Modelo {
         }     
         return $estaVacio;
     }
-
     public function cerrarConexion(){
         $this->conexion->close();
     }
