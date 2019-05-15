@@ -43,6 +43,7 @@
                     }
             }else{
                 $mensaje = "No has subido un archivo mp3 , o no has subido nada"; 
+                echo "$formato";
             }
             return $mensaje;
         }
