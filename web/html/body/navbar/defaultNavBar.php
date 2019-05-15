@@ -1,7 +1,5 @@
 <?php
-
 require_once("app/controllers/audios/busquedaAudios.php");
-
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">

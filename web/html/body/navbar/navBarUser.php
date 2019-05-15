@@ -1,3 +1,7 @@
+<?php
+require_once("app/controllers/audios/busquedaAudios.php");
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php"><img id="logo" src="web/html/body/img/logo.ico"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,15 +19,24 @@
         <a class="nav-link" href="index.php?ctl=viewUser">Perfil</a>
       </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Audios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="index.php?ctl=editar_audio">Subir Audio</a>
+          <a class="dropdown-item" href="index.php?ctl=verOwnAudios">Mis Audios</a>
+      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="index.php?ctl=desconectar">Desconectar</a>
       </li>
 
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"] ?>" id="caja_busqueda">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" value="<?php echo $search ?>">
+      <input type="submit" class="btn btn-outline-success my-1 my-sm-0" value="Buscar">
     </form>
 
   </div>
