@@ -36,7 +36,7 @@ Class Register extends Conexion {
         $sql = "INSERT INTO usuarios (correo,nombre,apodo,passwd,modalidad,rol) VALUES(?,?,?,?,?,?)";
         $stmt = $this->conexion->prepare($sql);
         
-        $stmt->bind_param("ssssss",$correo,$apodo,$apodo,$passwd,$modalidad,$rol);
+        $stmt->bind_param("ssssss",$correo,$nombre,$apodo,$passwd,$modalidad,$rol);
 
         $stmt->execute();
         $stmt->close();
