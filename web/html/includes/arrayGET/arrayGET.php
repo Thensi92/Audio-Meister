@@ -13,7 +13,9 @@ $arrayGET = [
     'ver_frmSubida' => "app/views/audio/viewFormularioSubida.php",
     'verOwnAudios' => "app/controllers/audio/controller_listarOwnAudios.php",
     'eliminarAudio' => "app/controllers/audio/controllerBorrarAudio.php",
-    'podcast' => "app/controllers/audios/filterControllerPodcast.php"
+    'podcast' => "app/controllers/audios/filterControllerPodcast.php",
+    'voz' => "app/controllers/audios/filterControllerVoz.php",
+    'musica' => "app/controllers/audios/filterControllerMusica.php"
 ];
 
 ?>
