@@ -9,7 +9,10 @@ $arrayGET = [
     'descargaAudio' => "app/controllers/audio/controllerDescarga.php",
     'viewUser' => "app/controllers/Usuarios/funciones_usuario/ViewUserController.php",
     'editUser' => "app/controllers/Usuarios/funciones_usuario/EditUserController.php",
-    'delUser' => "app/controllers/Usuarios/funciones_usuario/DeleteUserController.php"
+    'delUser' => "app/controllers/Usuarios/funciones_usuario/DeleteUserController.php",
+    'ver_frmSubida' => "app/views/audio/viewFormularioSubida.php",
+    'verOwnAudios' => "app/controllers/audio/controller_listarOwnAudios.php",
+    'eliminarAudio' => "app/controllers/audio/controllerBorrarAudio.php"
 ];
 
 ?>

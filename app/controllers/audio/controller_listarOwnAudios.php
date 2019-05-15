@@ -1,7 +1,6 @@
 <?php
-    include "app/db/Pagination.php";
     include "app/db/config.php";
-    include "app/models/model_conexion_BBDD.php";
+    include "app/models/conexion/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
 
     $metConexion = Config::$metodoConexion;
@@ -26,5 +25,5 @@
         $model[] = $rows;
     }
 
-    include "views/audio/viewcartasOwnAudio.php";
+    include "app/views/audio/viewcartasOwnAudio.php";
 ?>

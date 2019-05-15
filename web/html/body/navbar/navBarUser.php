@@ -24,7 +24,7 @@ require_once("app/controllers/audios/busquedaAudios.php");
           Audios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="index.php?ctl=editar_audio">Subir Audio</a>
+          <a class="dropdown-item" href="index.php?ctl=ver_frmSubida">Subir Audio</a>
           <a class="dropdown-item" href="index.php?ctl=verOwnAudios">Mis Audios</a>
       </li>
 
