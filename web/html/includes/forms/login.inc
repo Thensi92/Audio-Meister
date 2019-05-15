@@ -1,5 +1,5 @@
 <section>
-    <form action="index.php?ctl=procesar_login" method="POST">
+    <form id="form" action="index.php?ctl=null" method="POST">
         <fieldset>
             <legend>Inicio de sesión</legend>
             <div class="form-group">
