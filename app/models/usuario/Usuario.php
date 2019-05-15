@@ -2,15 +2,15 @@
 
     class Usuario{
 
-        private $conexion;
+        private $conexionUsuario;
 
         function __construct($host, $user, $passwd, $nameDB){
-            $this->conexion = new Conexion($host, $user, $passwd, $nameDB);
+            $this->conexionUsuario = new Conexion($host, $user, $passwd, $nameDB);
         }
 
-        public function getDatos($user, $passwd){
+        public function getDatos($correo, $passwd){
             //DEVOLVER DATOS DE USUARIO
-            $stmt = $this->conexion->conexion->prepare(
+            $stmt = $this->conexionUsuario->conexion->prepare(
                 "SELECT * FROM usuarios WHERE correo = ? AND passwd = ?");
 
             if($stmt){
@@ -18,6 +18,19 @@
                 $stmt->execute();
                 $resultado = $stmt->get_result();
                 $datosUsuario = $resultado->fetch_assoc();
+                /*
+                $stmt->bind_result($correo,$nombre,$apodo,$passwd,$modalidad,$rol);
+                $stmt->fetch();
+                
+                $datosUsuario = [
+                    'correo' => $correo,
+                    'nombre' => $nombre,
+                    'apodo' => $apodo,
+                    'passwd' => $passwd,
+                    'modalidad' => $modalidad,
+                    'rol' => $rol
+                ];
+                */
             }
             $stmt->close();
             return $datosUsuario;
@@ -30,13 +43,13 @@
             
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
             if($oldEmail==$nuevosDatos["correo"]){
-                $stmt = $this->conexion->conexion->prepare(
+                $stmt = $this->conexionUsuario->conexion->prepare(
                     "UPDATE usuarios SET
                     nombre = ?, apodo = ?, passwd = ?,
                     modalidad = ? 
                     WHERE correo = ? AND passwd = ?");
             }else{
-                $stmt = $this->conexion->conexion->prepare(
+                $stmt = $this->conexionUsuario->conexion->prepare(
                     "UPDATE usuarios SET correo = ? ,
                     nombre = ?, apodo = ?, passwd = ?,
                     modalidad = ? 
@@ -65,7 +78,7 @@
 
         public function eliminarUsuario($correo, $passwd){
             $usuarioEliminado = false;
-            $stmt = $this->conexion->conexion->prepare(
+            $stmt = $this->conexionUsuario->conexion->prepare(
                 "DELETE FROM usuarios WHERE correo = ? AND passwd = ?"
             );
             
@@ -81,7 +94,7 @@
         }
 
         public function cerrarConexion(){
-            $this->conexion->cerrarConexion();
+            $this->conexionUsuario->cerrarConexion();
         }
     }
 ?>

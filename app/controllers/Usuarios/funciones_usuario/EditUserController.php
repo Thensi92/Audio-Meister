@@ -5,9 +5,9 @@
         require_once("app/models/usuario/Usuario.php");
 
         $usuario = new Usuario(Config::$metodoConexion, Config::$usuario, Config::$contraseña, Config::$nombreBaseDatos);
+        
         $oldEmail = $_SESSION["datosUser"]["correo"];
         $oldPasswd= $_SESSION["datosUser"]["passwd"];
-        
         
         if(isset($_POST["editar_usuario"])){
 
