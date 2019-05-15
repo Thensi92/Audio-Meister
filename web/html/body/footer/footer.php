@@ -1,4 +1,4 @@
-<footer class="text-muted">
+<footer class="text-muted pag">
 <div class="card text-center">
   <div class="card-footer text-muted">
   <button class="btn btn-dark btn-lg pull-xs-right">
