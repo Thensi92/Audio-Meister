@@ -16,11 +16,11 @@ require_once("app/controllers/audios/busquedaAudios.php");
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">ADM</a>
+        <a class="nav-link" href="#">Gestion usuarios</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">ADM</a>
+        <a class="nav-link" href="index.php?ctl=listarAllAudios">Gestion audios</a>
       </li>
 
       <li class="nav-item dropdown">
