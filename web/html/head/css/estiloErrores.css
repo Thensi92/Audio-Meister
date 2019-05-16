@@ -1,15 +1,11 @@
-#arrayVacio{
-    margin-top: 35px;
-    margin: auto auto;
-    margin-bottom: 5px;
-    width: 50%;
-}
-
-#modal_button{
+#mensajeError {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
 }
 
-#errorPodcast{
-    margin-top: 35px;
+#botonError{
+    width: 50%;
+    margin: auto auto;
+    margin-bottom: 5px;
 }
