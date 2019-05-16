@@ -2,7 +2,7 @@
     
     <?php
     if(!empty($podcast)) {
-        echo '<div class="titulos_generos">PODCAST</div>';
+        echo '<h1 class="titulos_generos">PODCAST</h1>';
         
         echo '<div id="podcast" class="posicionamientoFlexible">';
         foreach($podcast as $row){
