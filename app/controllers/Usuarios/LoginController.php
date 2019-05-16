@@ -13,7 +13,8 @@
     if(isset($_SESSION['datosUser']['correo'])){
         header("Location:index.php");
     }else {
-        require_once("app/views/mensajes_error/errorLogin.php");
+        require_once("app/views/errores/errorLogin.php");
+        session_destroy();
     }
     
     $login->cerrarConexion();
