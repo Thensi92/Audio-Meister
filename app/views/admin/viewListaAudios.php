@@ -1,4 +1,3 @@
-<section>
     <?php
         echo '<ul class="list-group">';
             foreach($model as $row)
@@ -12,5 +11,4 @@
             }
         echo '</ul>';
     ?>
-    </div> 
-</section>
+    </div>

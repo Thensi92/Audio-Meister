@@ -1,4 +1,4 @@
- <section>   
+  
     <script>
             function mostrar(){
                 obj = document.getElementById("archivo");
@@ -43,4 +43,3 @@
                     <button type="submit" name="editar_audio" class="btn btn-primary">Editar</button>
                 </div>
                 <a class="btn btn-danger" href="index.php?ctl=eliminarAudio" role="button">Borrar</a>
-</section>

@@ -1,4 +1,3 @@
-<section>
     <form id="form" action="index.php?ctl=null" method="POST">
         <fieldset>
             <legend>Inicio de sesión</legend>
@@ -13,4 +12,3 @@
             <input class="btn btn-primary" type="submit" name= "procesar_login" value="Iniciar">
         </fieldset>
     </form>
-</section>

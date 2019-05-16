@@ -2,7 +2,7 @@
 require_once('app/controllers/audios/indexViewController.php');
 ?>
 
-<section>
+
     <div id="view_product">
     
     <?php
@@ -34,4 +34,3 @@ require_once('app/controllers/audios/indexViewController.php');
     echo "</center>";
     ?>
     
-</section>
