@@ -29,7 +29,7 @@ $search = null;
         }
     }else {
         $pagination->rowCount("SELECT * FROM audios");
-        $pagination->config(2, 16);
+        $pagination->config(2, 8);
         
         $sql = "SELECT * FROM audios ORDER BY fecha_subida ASC LIMIT $pagination->start_row, $pagination->max_rows";
         $query = $connection->prepare($sql);

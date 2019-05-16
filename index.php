@@ -22,8 +22,8 @@
             }
         }
 
-    //SECTION -> DESCOMENTAR BUCLE CUANDO ESTEN LOS CONTROLADORES
-
+    //SECTION
+    echo "<section>";
         if(isset($_GET['ctl'])){
             foreach($arrayGET as $control => $URI){
                 if($_GET['ctl'] == $control){
@@ -33,6 +33,7 @@
         }else{
             require_once("app/views/defaultView/indexView.php");
         }
+    echo "</section>";
     
     //FOOTER
         require_once("web/html/body/footer/footer.php");

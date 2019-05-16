@@ -22,7 +22,7 @@
         </div>
 
         <div class="form-group">
-            <label for="modalidad">Modalidad:</label>
+            <label for="modalidad">Subscripcion:</label>
             <select class="custom-select form-control" name="modalidad" id="modalidad" required>
                 <option value="Free" selected>Free</option>
                 <option value="Premium">Premium</option>

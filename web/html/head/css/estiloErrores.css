@@ -1,0 +1,12 @@
+#mensajeError {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#botonError{
+    width: 50%;
+    margin: auto auto;
+    margin-bottom: 5px;
+}
