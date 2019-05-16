@@ -18,15 +18,17 @@
             echo '</div>';
         }
         echo '</div>';
-        ?>   
+    ?>   
     </div>
 
     <?php
     echo "<center>";
-    echo "<div>";
-    $pagination->pages("btn btn-primary");
-    echo "</div>";
+        echo "<div>";
+            $pagination->pages("btn btn-primary");
+        echo "</div>";
     echo "</center>";
-    
+
+    }else{
+        require_once("app/views/errores/vista_podcastVacio.php");
     }
     ?>

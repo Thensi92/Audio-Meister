@@ -2,7 +2,8 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 65px;
+    margin-bottom: 175px;
 }
 
 #botonError{

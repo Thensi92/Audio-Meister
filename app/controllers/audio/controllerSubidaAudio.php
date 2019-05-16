@@ -21,5 +21,5 @@
 
     $resultado = $conexion->subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$correoUser,$tipoArchivo);
     $conexion->cerrarConexion();
-    echo "$resultado";
+    header("Location:index.php?ctl=verOwnAudios");
 ?>

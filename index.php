@@ -35,15 +35,15 @@
         }
     echo "</section>";
     
+    if(isset($_POST)){
+        foreach($arrayPOST as $namePOST => $URI){
+            if(isset($_POST[$namePOST])){
+                require_once($URI);
+            }
+        }
+    }
     //FOOTER
         require_once("web/html/body/footer/footer.php");
 
-        if(isset($_POST)){
-            foreach($arrayPOST as $namePOST => $URI){
-                if(isset($_POST[$namePOST])){
-                    require_once($URI);
-                }
-            }
-        }
 
 ?>

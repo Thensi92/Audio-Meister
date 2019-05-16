@@ -1,4 +1,5 @@
 <section>
+    <div class="posicionamientoFlexible">
     <?php
         foreach($model as $row)
         {
@@ -13,9 +14,6 @@
         }
     
     ?>
-    <div>
-        <?php
-    $pagination->pages("btn");
-    ?>
     </div>
+    
 </section>
