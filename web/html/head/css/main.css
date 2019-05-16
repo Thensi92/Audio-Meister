@@ -8,3 +8,7 @@
 #logo{
     width: 50px;
 }
+
+#caja_busqueda{
+    display: flex;
+}
