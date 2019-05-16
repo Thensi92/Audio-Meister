@@ -1,3 +1,15 @@
 #arrayVacio{
-    border: 1px solid black;
+    margin-top: 35px;
+    margin: auto auto;
+    margin-bottom: 5px;
+    width: 50%;
+}
+
+#modal_button{
+    display: flex;
+    justify-content: center;
+}
+
+#errorPodcast{
+    margin-top: 35px;
 }
