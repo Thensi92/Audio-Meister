@@ -12,9 +12,9 @@
     $pagination = new PDO_Pagination($conexion);
 
     $pagination->rowCount("SELECT * FROM usuarios");
-    $pagination->config(3, 3);
+    $pagination->config(3, 99);
     
-    $sql = "SELECT * FROM usuarios  LIMIT $pagination->start_row, $pagination->max_rows";
+    $sql = "SELECT * FROM usuarios WHERE rol ='user' LIMIT $pagination->start_row, $pagination->max_rows";
     $query = $conexion->prepare($sql);
     $query->execute();
     $model = array();
