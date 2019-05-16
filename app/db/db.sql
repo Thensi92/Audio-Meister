@@ -46,3 +46,22 @@ INSERT INTO `usuarios` (
         'adm@adm', 
         'Admin', 'adm', 'adm', 'Premium', 'admin'
         );
+
+INSERT INTO `usuarios` (
+    `correo`, 
+    `nombre`, 
+    `apodo`, 
+    `passwd`, 
+    `modalidad`, 
+    `rol`) VALUES (
+        'usr@usr', 
+        'User', 'usr', '1234', 'Premium', 'user'
+        );
+
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/BraveHeart.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/JoJo.mp3', 'web/html/body/img/Poster1.png', '00:01:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/02-Miracle.mp3', 'web/html/body/img/Poster1.png', '00:05:09','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/OnePunchMan2.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/cancion1.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/cancion2.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Audio4', 'web/musica/cancion3.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
