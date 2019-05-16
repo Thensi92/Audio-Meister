@@ -155,5 +155,18 @@
             return $mensaje;
         }
 
+        public function borrarUsuario($correo){
+            $sql = "DELETE FROM usuarios WHERE correo = ?";
+            $resultado = $this->conexion->prepare($sql);
+            $resultado->bind_param("s",$correo);
+            $resultado->execute();
+            if($resultado->affected_rows == 1){
+                $mensaje= "Exito";
+            }else{
+                $mensaje = "Fallo"; 
+            }
+            return $mensaje;
+        }
+
     }
 ?>
