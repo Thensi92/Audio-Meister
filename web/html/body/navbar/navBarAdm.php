@@ -16,7 +16,7 @@ require_once("app/controllers/audios/busquedaAudios.php");
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Gestion usuarios</a>
+        <a class="nav-link" href="index.php?ctl=listarAllUser">Gestion usuarios</a>
       </li>
 
       <li class="nav-item">

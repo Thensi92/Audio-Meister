@@ -18,7 +18,9 @@ $arrayGET = [
     'voz' => "app/controllers/audios/filterControllerVoz.php",
     'musica' => "app/controllers/audios/filterControllerMusica.php",
     'listarAllAudios' => "app/controllers/admin/controller_listarAllAudios.php",
-    'eliminarAudioAdmin' => "app/controllers/admin/controllerBorrarAudioUser.php"
+    'eliminarAudioAdmin' => "app/controllers/admin/controllerBorrarAudioUser.php",
+    'listarAllUser' => "app/controllers/admin/controller_listarAllUsuarios.php",
+    'eliminarUserAdmin' => "app/controllers/admin/controllerBorrarUsuario.php"
 ];
 
 ?>
