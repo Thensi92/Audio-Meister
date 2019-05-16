@@ -1,9 +1,8 @@
-<section>
     <div id="view_product">
     
     <?php
     if(!empty($podcast)) {
-        echo '<div class="titulos_generos">Podcast</div>';
+        echo '<div class="titulos_generos">PODCAST</div>';
         
         echo '<div id="podcast" class="posicionamientoFlexible">';
         foreach($podcast as $row){
@@ -32,5 +31,3 @@
         require_once("app/views/errores/vista_podcastVacio.php");
     }
     ?>
-    
-</section>

@@ -1,9 +1,9 @@
-<section>
+
     <div id="view_product">
     
     <?php
     if(!empty($musica)) {
-        echo '<div class="titulos_generos">Podcast</div>';
+        echo '<h1 class="titulos_generos"> MUSICA </h1>';
         
         echo '<div id="podcast" class="posicionamientoFlexible">';
         foreach($musica as $row){
@@ -30,5 +30,3 @@
     
     }
     ?>
-    
-</section>

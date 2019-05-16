@@ -1,9 +1,8 @@
-<section>
     <div id="view_product">
     
     <?php
     if(!empty($voz)) {
-        echo '<div class="titulos_generos">Podcast</div>';
+        echo '<div class="titulos_generos">NOTAS DE AUDIO</div>';
     }
 
     echo '<div id="podcast" class="posicionamientoFlexible">';
@@ -29,5 +28,3 @@
         echo "</div>";
     echo "</center>";
     ?>
-    
-</section>

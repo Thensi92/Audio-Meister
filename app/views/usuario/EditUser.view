@@ -1,4 +1,4 @@
-<form id="form_edit_user" action="index.php?ctl=editUser" method="POST">
+<form id="form" action="index.php?ctl=editUser" method="POST">
     <fieldset>
         <legend>Editar datos de usuario</legend>
 
@@ -20,8 +20,11 @@
         </div>
 
         <div class="form-group">
-            <label for="modalidad">Modalidad:</label><br>
-            <input type="text" class="form-control" name="modalidad" id="modalidad" value="<?=$_SESSION['datosUser']['modalidad']?>" required><br>
+            <label for="modalidad">Subscripcion:</label>
+            <select class="custom-select form-control" name="modalidad" id="modalidad" required>
+                <option value="Free">Free</option>
+                <option value="Premium">Premium</option>
+            </select>
         </div>
 
         <div class="form-group">
