@@ -1,4 +1,4 @@
-
+    <div id="reproductor">
        <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="web/html/body/img/Poster1.png" >
             <div class="card-body">
@@ -61,3 +61,4 @@
             
             echo " <a href='index.php?ctl=descargaAudio&url=$url&nombre=$nombre'>Descargar</a>";
             ?>
+    </div>

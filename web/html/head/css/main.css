@@ -11,4 +11,12 @@
 
 #caja_busqueda{
     display: flex;
+    text-align: center;
+}
+
+#reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 25px;
 }

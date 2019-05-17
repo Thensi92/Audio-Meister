@@ -37,8 +37,8 @@ require_once("app/controllers/audios/busquedaAudios.php");
     </ul>
 
     <form method="POST" action="<?php echo $_SERVER["PHP_SELF"] ?>" id="caja_busqueda">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" value="<?php echo $search ?>">
-      <input type="submit" class="btn btn-outline-success my-1 my-sm-0" value="Buscar">
+      <input class="form-control mr-sm-2" type="search" aria-label="Search" name="search" value="<?php echo $search ?>">
+      <input type="submit" class="btn btn-outline-success my-0 my-sm-0" value="Buscar">
     </form>
 
   </div>
