@@ -24,3 +24,12 @@
 .pag{
     margin-top: 50px;
 }
+
+#paginas {
+    margin-bottom: 50px;
+}
+
+#gestionesAdmin {
+    display: flex;
+    margin-bottom: 40px;
+}

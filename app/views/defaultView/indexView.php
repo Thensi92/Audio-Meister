@@ -28,7 +28,7 @@ require_once('app/controllers/audios/indexViewController.php');
 
     <?php
     echo "<center>";
-        echo "<div>";
+        echo "<div id=paginas>";
             $pagination->pages("btn btn-primary");
         echo "</div>";
     echo "</center>";

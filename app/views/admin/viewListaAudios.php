@@ -1,3 +1,4 @@
+ <div id="gestionesAdmin">
  <?php
         echo '<ul class="list-group">';
         if(isset($correoUser)){
@@ -14,3 +15,4 @@
             }
         echo '</ul>';
 ?>
+<div>
