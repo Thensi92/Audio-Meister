@@ -8,6 +8,20 @@
             $this->conexionUsuario = new Conexion($host, $user, $passwd, $nameDB);
         }
 
+        public function getApodo($correo, $pass){
+            $stmt = $this->conexionUsuario->conexion->prepare(
+                "SELECT apodo FROM usuarios WHERE correo = ? AND passwd = ?");
+
+            if($stmt){
+                $stmt->bind_param("ss", $correo, $passwd);
+                $stmt->execute();
+                $stmt->bind_result($apodo);
+            }
+            $stmt->close();
+
+            return $apodo;
+        }
+
         public function getDatos($correo, $passwd){
             //DEVOLVER DATOS DE USUARIO
             $stmt = $this->conexionUsuario->conexion->prepare(
@@ -18,19 +32,6 @@
                 $stmt->execute();
                 $resultado = $stmt->get_result();
                 $datosUsuario = $resultado->fetch_assoc();
-                /*
-                $stmt->bind_result($correo,$nombre,$apodo,$passwd,$modalidad,$rol);
-                $stmt->fetch();
-                
-                $datosUsuario = [
-                    'correo' => $correo,
-                    'nombre' => $nombre,
-                    'apodo' => $apodo,
-                    'passwd' => $passwd,
-                    'modalidad' => $modalidad,
-                    'rol' => $rol
-                ];
-                */
             }
             $stmt->close();
             return $datosUsuario;
