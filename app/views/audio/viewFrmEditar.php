@@ -42,4 +42,4 @@
                     </select>
                     <button type="submit" name="editar_audio" class="btn btn-primary">Editar</button>
                 </div>
-                <a class="btn btn-danger" href="index.php?ctl=eliminarAudio" role="button">Borrar</a>
+                <a class="btn btn-danger" href="index.php?ctl=verMsg&ctlSecundario=eliminarAudio" role="button">Borrar</a>

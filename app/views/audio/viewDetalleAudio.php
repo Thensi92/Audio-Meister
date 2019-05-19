@@ -1,18 +1,44 @@
-    <div id="reproductor">
-       <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="web/html/body/img/Poster1.png" >
-            <div class="card-body">
-                    <div id="player">
-                        <div id="buttons">
-                        <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png"/></button>
+<div class="media bg-light">
+  <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2" alt="...">
+  <div class="media-body">
+    <div id="player">
+                <div id="buttons">
+                    <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png"/></button>
+                </div>
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+                <div id="">
+                    <div class="form-group">
+                        <label for="nombreAudio">Nombre Audio</label>
+                        <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
                     </div>
-                    <div id="seek-bar">
-                        <div id="fill"></div>
-                        <div id="handle"></div>
-                    </div>
-            </div>
+                    <div class="form-group">
+                        <label>Duracion</label>
+                        <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
+                </div>
         </div>
-            <script type="text/javascript">
+         <?php
+                $url = $arrayDatos["rutaAudio"];
+                $nombre = $arrayDatos["nombre"];
+                $id = $arrayDatos["id"];
+
+            echo '<ul class="list-group list-group-horizontal-md">
+                    <li class="list-group-item"> <a href=\'index.php?ctl=descargaAudio&url=$url&nombre=$nombre\'>Descargar</a></li>
+                    <li class="list-group-item"><a href="index.php?ctl=verComentarios&id='.$id.'">Ver Comentarios</a></li>';
+                    //Si esta logeado muestra la opcion de subir el Audio
+                    if(isset($_SESSION["datosUser"]))
+                    {
+                        echo '<li class="list-group-item"><a href="index.php?ctl=verFrmComentario&id='.$id.'">Subir Comentarios</a></li>';
+                    }
+                   
+                 echo '</ul>';
+            ?>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
                 var songTitle = document.getElementById("songTitle");
                 var fillBar = document.getElementById("fill");
                 
@@ -45,20 +71,3 @@
                     fillBar.style.width = position * 100 +'%';
                 });
             </script>
-         <div id="">
-              <div class="form-group">
-                <label for="nombreAudio">Nombre Audio</label>
-                <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
-             </div>
-            <div class="form-group">
-                <label>Duracion</label>
-                <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
-            </div>
-        </div>
-         <?php
-                $url = $arrayDatos["rutaAudio"];
-                $nombre = $arrayDatos["nombre"];
-            
-            echo " <a href='index.php?ctl=descargaAudio&url=$url&nombre=$nombre'>Descargar</a>";
-            ?>
-    </div>

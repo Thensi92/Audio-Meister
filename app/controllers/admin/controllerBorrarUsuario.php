@@ -1,7 +1,7 @@
 <?php
-    include "config.php";
-    include "model_conexion_BBDD.php";
-    include "model_audio.php";
+    include "app/db/config.php";
+    include "app/models/conexion/model_conexion_BBDD.php";
+    include "app/models/model_audio.php";
 
     $metConexion = Config::$metodoConexion;
     $user= Config::$usuario;
