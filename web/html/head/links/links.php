@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloDivIndex.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloCartaDetalle.css">
+    
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloFormularios.css">
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloErrores.css">
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/reproductor.css">

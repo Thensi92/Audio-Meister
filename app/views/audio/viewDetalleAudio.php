@@ -1,3 +1,4 @@
+<div id="caja-reproductor">
 <div class="media bg-light">
   <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2" alt="...">
   <div class="media-body">
@@ -37,6 +38,7 @@
             ?>
     </div>
   </div>
+</div>
 </div>
 <script type="text/javascript">
                 var songTitle = document.getElementById("songTitle");
