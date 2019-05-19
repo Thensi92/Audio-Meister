@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloCartaDetalle.css">
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloFormularios.css">
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloErrores.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/reproductor.css">
     
     <link rel="stylesheet" type="text/js" media="screen" href="web/html/body/js/jquery-1.10.2.min.js">
         
