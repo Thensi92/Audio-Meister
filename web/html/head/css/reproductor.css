@@ -10,13 +10,13 @@
 
 #datos-audio {
     border: 1px solid black;
-    display: flex;
+    display: inline-flex;
     flex-flow: column wrap;
     align-content: flex-start;
 }
 
 #imagen-reproductor {
-    width: 50%;
+    max-width: 100%;   
 }
 
 #botonPlay {
