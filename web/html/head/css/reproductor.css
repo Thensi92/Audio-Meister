@@ -1,4 +1,16 @@
-
 #caja-reproductor {
+    display: flex;
     margin-bottom: 60px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 50%;
+    justify-content: center;
+    margin: auto auto;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#imagen-reproductor {
+    max-width: 100%;
+    margin: 5px;
 }

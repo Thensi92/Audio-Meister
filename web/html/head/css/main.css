@@ -7,17 +7,11 @@
     text-align: center;
 }
 
-#reproductor{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-top: 25px;
-}
-
 html {
   min-height: 100%;
   position: relative;
 }
+
 body {
   margin: 0;
   margin-bottom: 40px;
@@ -26,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 footer {
   background-color: black;
   position: absolute;

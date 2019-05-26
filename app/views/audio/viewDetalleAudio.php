@@ -1,10 +1,11 @@
 <div id="caja-reproductor">
-<div class="media bg-light">
-  <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2" alt="...">
-  <div class="media-body">
-    <div id="player">
+    <div class="media">
+        <img src="web/html/body/img/Poster1.png" id="imagen-reproductor" class="align-self-center mr-2"
+            alt="Imagen del reproductor">
+        <div class="media-body">
+            <div id="player">
                 <div id="buttons">
-                    <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png"/></button>
+                    <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png" /></button>
                 </div>
                 <div id="seek-bar">
                     <div id="fill"></div>
@@ -18,9 +19,9 @@
                     <div class="form-group">
                         <label>Duracion</label>
                         <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
+                    </div>
                 </div>
-        </div>
-         <?php
+                <?php
                 $url = $arrayDatos["rutaAudio"];
                 $nombre = $arrayDatos["nombre"];
                 $id = $arrayDatos["id"];
@@ -36,40 +37,40 @@
                    
                  echo '</ul>';
             ?>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </div>
 <script type="text/javascript">
-                var songTitle = document.getElementById("songTitle");
-                var fillBar = document.getElementById("fill");
-                
-                var song = new Audio();
-                var currentSong = 0;    // it point to the current song
-                
-                window.onload = playSong;   // it will call the function playSong when window is load
-                
-                function playSong(){
-                    song.src = '<?php echo $arrayDatos["rutaAudio"];?>'  //Pone la src de la cancion que esta guardada en la sesion            
-                    song.play();    // play the song
-                }
-                
-                function playOrPauseSong(){
-                    
-                    if(song.paused){
-                        song.play();
-                        $("#play img").attr("src","web/html/body/img/Pause.png");
-                    }
-                    else{
-                        song.pause();
-                        $("#play img").attr("src","web/html/body/img/Play.png");
-                    }
-                }
-                
-                song.addEventListener('timeupdate',function(){ 
-                    
-                    var position = song.currentTime / song.duration;
-                    
-                    fillBar.style.width = position * 100 +'%';
-                });
-            </script>
+    var songTitle = document.getElementById("songTitle");
+    var fillBar = document.getElementById("fill");
+
+    var song = new Audio();
+    var currentSong = 0;    // it point to the current song
+
+    window.onload = playSong;   // it will call the function playSong when window is load
+
+    function playSong() {
+        song.src = '<?php echo $arrayDatos["rutaAudio"];?>'  //Pone la src de la cancion que esta guardada en la sesion            
+        song.play();    // play the song
+    }
+
+    function playOrPauseSong() {
+
+        if (song.paused) {
+            song.play();
+            $("#play img").attr("src", "web/html/body/img/Pause.png");
+        }
+        else {
+            song.pause();
+            $("#play img").attr("src", "web/html/body/img/Play.png");
+        }
+    }
+
+    song.addEventListener('timeupdate', function () {
+
+        var position = song.currentTime / song.duration;
+
+        fillBar.style.width = position * 100 + '%';
+    });
+</script>

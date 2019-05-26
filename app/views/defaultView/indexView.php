@@ -2,15 +2,10 @@
 require_once('app/controllers/audios/indexViewController.php');
 ?>
 
-
     <div id="view_product">
     
     <?php
-    if(!empty($podcast)) {
-        echo '<div class="titulos_generos">Podcast</div>';
-    }
-
-    echo '<div id="podcast" class="posicionamientoFlexible">';
+    echo '<div class="posicionamientoFlexible">';
     foreach($model as $row){
         echo '<div class="card" style="width: 18rem;">';
         echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
