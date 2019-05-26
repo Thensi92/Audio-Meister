@@ -44,7 +44,11 @@ INSERT INTO `usuarios` (
     `modalidad`, 
     `rol`) VALUES (
         'adm@adm', 
-        'Admin', 'adm', 'adm', 'Premium', 'admin'
+        'Admin', 
+        'adm', 
+        '$2y$10$a0FopDsbSd105Eb4EhvHr.Nl577WPujrfEKKLhg4D35DE42aCA8Bq', 
+        'Premium', 
+        'admin'
         );
 
 INSERT INTO `usuarios` (
@@ -55,7 +59,11 @@ INSERT INTO `usuarios` (
     `modalidad`, 
     `rol`) VALUES (
         'usr@usr', 
-        'User', 'usr', '1234', 'Premium', 'user'
+        'User', 
+        'usr', 
+        '$2y$10$a0FopDsbSd105Eb4EhvHr.Nl577WPujrfEKKLhg4D35DE42aCA8Bq', 
+        'Premium', 
+        'user'
         );
 
 INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('BraveHeart', 'web/musica/BraveHeart.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
