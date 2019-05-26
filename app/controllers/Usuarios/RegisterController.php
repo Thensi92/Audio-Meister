@@ -17,14 +17,14 @@ $correo = $_POST['correo'];
 $nombre = $_POST['nombre'];
 $apodo = $_POST['apodo'];
 $passwd = $_POST['pass'];
+$passwdHash = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 $modalidad = $_POST['modalidad'];
-
 
 $arrayDatosUser = array(
     $correo,
     $nombre,
     $apodo,
-    $passwd,
+    $passwdHash,
     $modalidad
 );
 
@@ -34,6 +34,10 @@ $registro->cerrarConexion();
 $_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
 
 if(isset($_SESSION['datosUser']['correo'])){
+    $carpeta = "web/musica/".$_SESSION['datosUser']['correo'];
+    if(!file_exists($carpeta)){
+        mkdir($carpeta);
+    }
     header("Location:index.php");
 }
 
