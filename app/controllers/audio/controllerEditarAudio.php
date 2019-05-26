@@ -17,6 +17,7 @@
     $boolEditarAudio = false;
     $id=$_GET["id"];
     $tipoArchivo = $_POST["tipoAudio"];
+    $rutaArchivoAntiguo = $_SESSION["audioBorrar"]["ruta"] ;
 
     if(!empty($_FILES["archivoAudio"]["type"] )){
         $formatoArchivo = $_FILES["archivoAudio"]["type"];
@@ -31,7 +32,7 @@
         $nArchivo= "null";
     }
                                      
-    $resultado = $conexion->editarAudio($id,$nombre,$correoUser,$tipoArchivo,$boolEditarAudio,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo);
+    $resultado = $conexion->editarAudio($id,$nombre,$correoUser,$tipoArchivo,$boolEditarAudio,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$rutaArchivoAntiguo);
     $conexion->cerrarConexion();
     echo "$resultado"; 
    
