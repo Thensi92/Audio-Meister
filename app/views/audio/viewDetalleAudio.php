@@ -1,17 +1,15 @@
-<div id="caja-reproductor">
     <div class="media">
-        <img src="web/html/body/img/Poster1.png" id="imagen-reproductor" class="align-self-center mr-2"
-            alt="Imagen del reproductor">
+<div id="caja-reproductor">
         <div class="media-body">
             <div id="player">
-                <div id="buttons">
+                <div id="botonPlay">
                     <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png" /></button>
                 </div>
                 <div id="seek-bar">
                     <div id="fill"></div>
                     <div id="handle"></div>
                 </div>
-                <div id="">
+                <div id="datos-audio">
                     <div class="form-group">
                         <label for="nombreAudio">Nombre Audio</label>
                         <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
@@ -19,6 +17,11 @@
                     <div class="form-group">
                         <label>Duracion</label>
                         <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
+                    </div>
+
+                    <div id="imagen-reproductor">
+                        <img src="web/html/body/img/Poster1.png" id="imagen-reproductor" class="align-self-center mr-2"
+                        alt="Imagen del reproductor">
                     </div>
                 </div>
                 <?php

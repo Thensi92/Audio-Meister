@@ -1,16 +1,24 @@
 #caja-reproductor {
+    border: 1px solid black;
     display: flex;
-    margin-bottom: 60px;
+    flex-flow: row wrap;
     max-width: 100%;
-    max-height: 100%;
-    width: 50%;
     justify-content: center;
     margin: auto auto;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+#datos-audio {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
 }
 
 #imagen-reproductor {
-    max-width: 100%;
-    margin: 5px;
+    width: 50%;
+}
+
+#botonPlay {
+    text-align: center;
 }
