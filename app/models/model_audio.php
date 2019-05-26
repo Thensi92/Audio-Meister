@@ -9,7 +9,11 @@
             $tamanioMaximo = 16777216;
             $rutaImagen = "web/html/body/img/Poster1.png";
             $tipoCasteado = (int)$tipo;
-
+            $codigo = rand(1,1000);
+            if(file_exists($rutaDefinitiva)){
+                copy($rutaDefinitiva,$rutaConst.$codigo.$nArchivo);
+                $rutaDefinitiva = $rutaConst.$codigo.$nArchivo;
+            }
             //Comprobacion del tipo de archivo subido
             if($formato == $tipoDefecto || $formato == $tipoDefecto2){
                     if($tamanio > $tamanioMaximo){
