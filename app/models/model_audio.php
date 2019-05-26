@@ -4,7 +4,7 @@
         public function subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formato,$tamanio,$correoUser,$tipo){
             $tipoDefecto = "audio/mp3";
             $tipoDefecto2 = "audio/mpeg";
-            $rutaConst = "web/musica/";
+            $rutaConst = "web/musica/".$correoUser."/";
             $rutaDefinitiva = $rutaConst.$nArchivo;
             $tamanioMaximo = 16777216;
             $rutaImagen = "web/html/body/img/Poster1.png";
@@ -32,7 +32,6 @@
                             $resultado = $this->conexion->prepare($sql);
                             $resultado->bind_param("sssssi",$nombre,$rutaDefinitiva,$rutaImagen,$duracion,$correoUser,$tipoCasteado);
                             $resultado->execute();
-
                             if($resultado->affected_rows == 1){
                                 $mensaje = "Exito"; 
                             }else{
@@ -96,16 +95,17 @@
             return $mensaje;
         }
 
-        public function editarAudio($id,$nombre,$correoUser,$tipo,$modificarAudio,$nArchivo,$rutaTemporal,$formato,$tamanio){
+        public function editarAudio($id,$nombre,$correoUser,$tipo,$modificarAudio,$nArchivo,$rutaTemporal,$formato,$tamanio,$rutaArchivoAntiguo){
             $tipoDefecto = "audio/mp3";
-            $rutaConst = "musica/";
+            $rutaConst = "web/musica/".$correoUser."/";
             $rutaDefinitiva = $rutaConst.$nArchivo;
             $tamanioMaximo = 16777216;
-            $rutaImagen = "web/html/img/Poster1.png";
+            $rutaImagen = "web/html/body/img/Poster1.png";
             $tipoCasteado = (int)$tipo;
 
             if($modificarAudio)
             {  
+                unlink($rutaArchivoAntiguo);
                 if($formato == $tipoDefecto){
 
                     if($tamanio > $tamanioMaximo){

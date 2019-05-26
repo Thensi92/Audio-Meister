@@ -34,6 +34,10 @@ $registro->cerrarConexion();
 $_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
 
 if(isset($_SESSION['datosUser']['correo'])){
+    $carpeta = "web/musica/".$_SESSION['datosUser']['correo'];
+    if(!file_exists($carpeta)){
+        mkdir($carpeta);
+    }
     header("Location:index.php");
 }
 
