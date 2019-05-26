@@ -21,6 +21,10 @@ html {
 body {
   margin: 0;
   margin-bottom: 40px;
+  background-image: url(../../body/img/fondo-web.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 footer {
   background-color: black;

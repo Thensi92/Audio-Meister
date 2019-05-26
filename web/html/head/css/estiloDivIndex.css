@@ -4,6 +4,27 @@
     margin: auto auto;
     width: 86%;
     align-items: center;
+    opacity: 0.85;
+}
+
+#datos_usuario{
+    margin-top: 25px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+#datos_usuario >ul>li{
+    list-style: none;
+}
+
+#botones {
+    display: flex;
+    justify-content: center;
+}
+
+#botones > a > button[name="editar"]{
+    margin-right: 35px;
 }
 
 .posicionamientoFlexible{
