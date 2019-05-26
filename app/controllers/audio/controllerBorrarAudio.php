@@ -1,6 +1,6 @@
 <?php
     include "app/db/config.php";
-    include "app/models/model_conexion_BBDD.php";
+    include "app/models/conexion/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
 
     $idAudio = $_SESSION["audioBorrar"]["idAudio"];
