@@ -10,6 +10,7 @@
 #datos-audio {
     margin-right: 50px;
     text-align: center;
+    width: 30%;
 }
 
 #imagen-reproductor{
@@ -19,7 +20,7 @@
 }
 
 #imagen-reproductor > img {
-    width: 100%;
+    width: 20%;
 }
 
 #botonPlay {
@@ -30,4 +31,29 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+}
+
+#seek-bar{
+    width: 100%;
+    height: 5px;
+    background-color:gray;
+    display: flex;
+    border-radius: 50px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+#fill{
+    height: 5px;
+    background-color:royalblue;
+    border-radius: 20px;
+}
+
+#handle{
+    width: 8px;
+    height: 8px;
+    background-color:royalblue;
+    border-radius: 50%;
+    margin-left: -5px;
+    transform: scale(2);
 }

@@ -1,28 +1,29 @@
-    <div class="media">
-<div id="caja-reproductor">
+<div class="media">
+    <div id="caja-reproductor">
         <div class="media-body">
-            <div id="player">
-                <div id="botonPlay">
-                    <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Pause.png" /></button>
+            <div id="datos-audio">
+                <div class="form-group">
+                    <label for="nombreAudio">Nombre Audio</label>
+                    <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
                 </div>
-                <div id="seek-bar">
-                    <div id="fill"></div>
-                    <div id="handle"></div>
+                <div class="form-group">
+                    <label>Duracion</label>
+                    <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
                 </div>
-                <div id="datos-audio">
-                    <div class="form-group">
-                        <label for="nombreAudio">Nombre Audio</label>
-                        <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
+            </div>
+                    <div id="imagen-reproductor">
+                    <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2 img-fluid"
+                            alt="Imagen del reproductor">
                     </div>
-                    <div class="form-group">
-                        <label>Duracion</label>
-                        <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
+                <div id="player">
+                    <div id="botonPlay">
+                        <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Play.png" /></button>
+                    </div>
+                    <div id="seek-bar">
+                        <div id="fill"></div>
+                        <div id="handle"></div>
                     </div>
 
-                    <div id="imagen-reproductor">
-                        <img src="web/html/body/img/Poster1.png" id="imagen-reproductor" class="align-self-center mr-2"
-                        alt="Imagen del reproductor">
-                    </div>
                 </div>
                 <?php
                 $url = $arrayDatos["rutaAudio"];
@@ -44,6 +45,7 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
     var songTitle = document.getElementById("songTitle");
     var fillBar = document.getElementById("fill");
