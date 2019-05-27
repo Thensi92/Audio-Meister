@@ -2,23 +2,32 @@
     border: 1px solid black;
     display: flex;
     flex-flow: row wrap;
-    max-width: 100%;
-    justify-content: center;
-    margin: auto auto;
     margin-bottom: 60px;
+    margin-top: 20px;
+    margin: auto auto;
 }
 
 #datos-audio {
-    border: 1px solid black;
-    display: inline-flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
+    margin-right: 50px;
+    text-align: center;
 }
 
-#imagen-reproductor {
-    max-width: 100%;   
+#imagen-reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#imagen-reproductor > img {
+    width: 100%;
 }
 
 #botonPlay {
     text-align: center;
+}
+
+#opciones-reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
