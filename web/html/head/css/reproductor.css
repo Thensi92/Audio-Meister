@@ -6,9 +6,11 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    align-items: center;
 }
 
 #play{
+    margin-bottom: 15px;
     cursor: pointer; /*Tipo de cursor */
 }
 
