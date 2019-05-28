@@ -1,5 +1,5 @@
 <?php
- echo '<form id="form" action="index.php?ctl=subirComentario&idAudio='.$idAudio.'&correo='.$usuario.' " method="post" >';
+ echo '<form id="form" action="index.php?ctl=up&idAudio='.$idAudio.'&correo='.$usuario.' " method="post" >';
  ?>
         <div class="form-group">
         <label for="comment">Escribe el comentario:</label>
@@ -21,5 +21,5 @@
                     </select>
                 </div>
     <br>
-    <button type="submit" name="" class="btn btn-primary">Subir</button>
+    <button type="submit" name="subirComentario" class="btn btn-primary">Subir</button>
 </form>
