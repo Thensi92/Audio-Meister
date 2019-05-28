@@ -1,51 +1,55 @@
-<div class="media">
-    <div id="caja-reproductor">
+<div id="caja-reproductor">
+    <div class="media">
         <div class="media-body">
+<!-------------------------------- DETALLES DEL USUARIO -------------------------------------------------------------------------->
             <div id="datos-audio">
+
                 <div class="form-group">
                     <label for="nombreAudio">Nombre Audio</label>
                     <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
                 </div>
+
                 <div class="form-group">
                     <label>Duracion</label>
                     <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
                 </div>
+
             </div>
-                    <div id="imagen-reproductor">
-                    <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2 img-fluid"
-                            alt="Imagen del reproductor">
-                    </div>
+<!------------------------------- IMAGEN REPRODUCTOR----------------------------------------------------------------------------->
+                <div id="imagen-reproductor">
+                    <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2 img-fluid" alt="Imagen del reproductor">
+                </div>
+<!-------------------------------- BOTONES Y BARRA DE AUDIO ---------------------------------------------------------------------->
                 <div id="player">
                     <div id="botonPlay">
                         <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Play.png" /></button>
-                    </div>
-                    <div id="seek-bar">
-                        <div id="fill"></div>
-                        <div id="handle"></div>
-                    </div>
-
                 </div>
+
+                <div id="seek-bar">
+                    <div id="fill"></div>
+                    <div id="handle"></div>
+                </div>
+<!----------------------------------- OPCIONES REPRODUCTOR --------------------------------------------------------------------------->
                 <?php
                 $url = $arrayDatos["rutaAudio"];
                 $nombre = $arrayDatos["nombre"];
                 $id = $arrayDatos["id"];
 
-            echo '<ul class="list-group list-group-horizontal-md">
+                echo '<ul class="list-group list-group-horizontal-md">
                     <li class="list-group-item"> <a href=\'index.php?ctl=descargaAudio&url=$url&nombre=$nombre\'>Descargar</a></li>
                     <li class="list-group-item"><a href="index.php?ctl=verComentarios&id='.$id.'">Ver Comentarios</a></li>';
                     //Si esta logeado muestra la opcion de subir el Audio
                     if(isset($_SESSION["datosUser"]))
                     {
                         echo '<li class="list-group-item"><a href="index.php?ctl=verFrmComentario&id='.$id.'">Subir Comentarios</a></li>';
-                    }
-                   
-                 echo '</ul>';
+                    } 
+                echo '</ul>';
             ?>
-            </div>
+
         </div>
     </div>
 </div>
-
+<!------------------------SCRIPT REPRODUCTOR ----------------------------------------------------------------------------------->
 <script type="text/javascript">
     var songTitle = document.getElementById("songTitle");
     var fillBar = document.getElementById("fill");
