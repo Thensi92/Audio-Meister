@@ -41,9 +41,19 @@
             //EDITAR DATOS DE USUARIO. COMPARAR LOS NUEVOS DATOS CON LOS DE SESION
 
             $editado = false;
+            $passwdHash;
+
+            if($oldPasswd != $nuevosDatos["passwd"]){
+                $passwdHash = password_hash($nuevosDatos["passwd"], PASSWORD_BCRYPT);
+            }else{
+                $passwdHash = $oldPasswd;
+            }
+
+            // Guarda el hash temporalmente para luego recogerlo en el controlador.
+            $_POST["Temp_Hash"] = $passwdHash ;
             
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
-            if($oldEmail==$nuevosDatos["correo"]){
+            if($oldEmail == $nuevosDatos["correo"]){
                 $stmt = $this->conexionUsuario->conexion->prepare(
                     "UPDATE usuarios SET
                     nombre = ?, apodo = ?, passwd = ?,
@@ -59,13 +69,13 @@
             
             //Si el correo anterior es igual al del array no intentará cambiar la clave principal
             if($stmt){
-                if($oldEmail==$nuevosDatos["correo"]){
+                if($oldEmail == $nuevosDatos["correo"]){
                     $stmt->bind_param("ssssss", $nuevosDatos["nombre"],
-                    $nuevosDatos["apodo"], $nuevosDatos["passwd"],
+                    $nuevosDatos["apodo"], $passwdHash,
                     $nuevosDatos["modalidad"], $oldEmail, $oldPasswd);
                 }else{
                     $stmt->bind_param("sssssss", $nuevosDatos["correo"], $nuevosDatos["nombre"],
-                    $nuevosDatos["apodo"], $nuevosDatos["passwd"],
+                    $nuevosDatos["apodo"], $passwdHash,
                     $nuevosDatos["modalidad"], $oldEmail, $oldPasswd);
                 }
                 //print_r($nuevosDatos);
@@ -74,6 +84,7 @@
                     $editado = true;
                 }
             }
+
             return $editado;
         }
 
