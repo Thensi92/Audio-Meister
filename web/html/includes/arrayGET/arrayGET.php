@@ -20,7 +20,10 @@ $arrayGET = [
     'listarAllAudios' => "app/controllers/admin/controller_listarAllAudios.php",
     'eliminarAudioAdmin' => "app/controllers/admin/controllerBorrarAudioUser.php",
     'listarAllUser' => "app/controllers/admin/controller_listarAllUsuarios.php",
-    'eliminarUserAdmin' => "app/controllers/admin/controllerBorrarUsuario.php"
+    'eliminarUserAdmin' => "app/controllers/admin/controllerBorrarUsuario.php",
+    'verComentarios' => "app/controllers/comentario/controllerVerComentarios.php",
+    'verFrmComentario' => "app/controllers/comentario/controllerViewFrmComentario.php",
+    'borrarComentario' => "app/controllers/comentario/controllerBorrarComentario.php"
 ];
 
 ?>
