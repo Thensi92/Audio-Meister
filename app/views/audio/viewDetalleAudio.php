@@ -23,12 +23,13 @@
                 <div id="player">
                     <div id="botonPlay">
                         <button id="play" onclick="playOrPauseSong()"><img src="web/html/body/img/Play.png" /></button>
+                    </div>
+                    <div id="seek-bar">
+                        <div id="fill"></div>
+                        <div id="handle"></div>
+                    </div>
                 </div>
 
-                <div id="seek-bar">
-                    <div id="fill"></div>
-                    <div id="handle"></div>
-                </div>
 <!----------------------------------- OPCIONES REPRODUCTOR --------------------------------------------------------------------------->
                 <?php
                 $url = $arrayDatos["rutaAudio"];
