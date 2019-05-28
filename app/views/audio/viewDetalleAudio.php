@@ -17,7 +17,7 @@
             </div>
 <!------------------------------- IMAGEN REPRODUCTOR----------------------------------------------------------------------------->
                 <div id="imagen-reproductor">
-                    <img src="web/html/body/img/Poster1.png" class="align-self-center mr-2 img-fluid" alt="Imagen del reproductor">
+                    <img src="web/html/body/img/Poster1.png" class="img-fluid" alt="Imagen del reproductor">
                 </div>
 <!-------------------------------- BOTONES Y BARRA DE AUDIO ---------------------------------------------------------------------->
                 <div id="player">
@@ -35,15 +35,15 @@
                 $nombre = $arrayDatos["nombre"];
                 $id = $arrayDatos["id"];
 
-                echo '<ul class="list-group list-group-horizontal-md">
-                    <li class="list-group-item"> <a href=\'index.php?ctl=descargaAudio&url=$url&nombre=$nombre\'>Descargar</a></li>
-                    <li class="list-group-item"><a href="index.php?ctl=verComentarios&id='.$id.'">Ver Comentarios</a></li>';
+                echo '<div id="opciones-reproductor">
+                <button type="button" class="btn btn-light"><a href=\'index.php?ctl=descargaAudio&url=$url&nombre=$nombre\'>Descargar</a></button>
+                <button type="button" class="btn btn-light"><a href="index.php?ctl=verComentarios&id='.$id.'">Ver Comentarios</a></button>';
                     //Si esta logeado muestra la opcion de subir el Audio
                     if(isset($_SESSION["datosUser"]))
                     {
-                        echo '<li class="list-group-item"><a href="index.php?ctl=verFrmComentario&id='.$id.'">Subir Comentarios</a></li>';
+                        echo '<button type="button" class="btn btn-light"><a href="index.php?ctl=verFrmComentario&id='.$id.'">Subir Comentarios</a></button>';
                     } 
-                echo '</ul>';
+                echo '</div>';
             ?>
 
         </div>
