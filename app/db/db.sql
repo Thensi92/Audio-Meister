@@ -28,8 +28,20 @@ CREATE TABLE IF NOT EXISTS Audios(
     correo VARCHAR(255),
     id_tipo int,
     PRIMARY KEY (id_audio),
-    CONSTRAINT fk_correo FOREIGN KEY (correo) REFERENCES Usuarios(correo),
+    CONSTRAINT fk_correo FOREIGN KEY (correo) REFERENCES Usuarios(correo) ON DELETE CASCADE,
     CONSTRAINT fk_id_tipo FOREIGN KEY (id_tipo) REFERENCES Tipos(id_tipo)
+);
+
+CREATE TABLE IF NOT EXISTS Comentarios(
+    id_comentario int AUTO_INCREMENT,
+    descripcion VARCHAR(255),
+    fecha_subida TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    puntuacion int,
+    id_audio int,
+    correo VARCHAR(255),
+    PRIMARY KEY (id_comentario),
+    CONSTRAINT fk_comentario_correo FOREIGN KEY (correo) REFERENCES Usuarios(correo) ON DELETE CASCADE,
+    CONSTRAINT fk_id_audio FOREIGN KEY (id_audio) REFERENCES Audios(id_audio) ON DELETE CASCADE
 );
 
 INSERT INTO tipos VALUES(1,'Podcast');
