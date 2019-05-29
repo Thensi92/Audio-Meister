@@ -8,6 +8,8 @@
     require_once("web/html/includes/arrayGET/arrayGET.php");
     require_once("web/html/includes/arrayPOST/arrayPOST.php");
 
+    print_r($arrayGET);
+
     //LINKS
     require_once("web/html/head/links/links.php");
 
