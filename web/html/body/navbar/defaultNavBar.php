@@ -1,4 +1,5 @@
 <?php
+echo "navbar!";
 require_once("app/controllers/audios/busquedaAudios.php");
 ?>
 

@@ -1,14 +1,10 @@
 <?php
 
-    echo "muestrate!";
-
     session_name('user');
     session_start();
 
     require_once("web/html/includes/arrayGET/arrayGET.php");
     require_once("web/html/includes/arrayPOST/arrayPOST.php");
-
-    print_r($arrayGET);
 
     //LINKS
     require_once("web/html/head/links/links.php");
@@ -18,6 +14,7 @@
     
     //NAVBAR
     if(empty($_SESSION['datosUser'])){
+        echo "empty session";
         require_once("web/html/body/navbar/defaultNavBar.php");
     }else{
         if($_SESSION['datosUser']['rol'] == "user"){
