@@ -2,6 +2,7 @@
     <div class="media">
         <div class="media-body">
 <!-------------------------------- DETALLES DEL USUARIO -------------------------------------------------------------------------->
+        <div id="caja-datos-imagen-reproductor">    
             <div id="datos-audio">
 
                 <div class="form-group">
@@ -13,12 +14,12 @@
                     <label>Duracion</label>
                     <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
                 </div>
-
             </div>
 <!------------------------------- IMAGEN REPRODUCTOR----------------------------------------------------------------------------->
                 <div id="imagen-reproductor">
                     <img src="web/html/body/img/Poster1.png" class="img-fluid" alt="Imagen del reproductor">
                 </div>
+            </div>
 <!-------------------------------- BOTONES Y BARRA DE AUDIO ---------------------------------------------------------------------->
                 <div id="player">
                     <div id="botonPlay">
