@@ -43,6 +43,8 @@
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 10px;
+    width: 80%;
+    margin: auto auto;
 }
 
 #caja-datos-imagen-reproductor{
@@ -56,7 +58,14 @@
     border: 2px solid black;
     display: flex;
     flex-flow: column wrap;
-    align-content: flex-start;
+    align-content: center;
+    align-items: center;
+    width: 42%;
+    text-align: center;
+}
+
+.ancho-input{
+   text-align: center;
 }
 
 
@@ -64,11 +73,13 @@
     display: flex;
     flex-flow: column wrap;
     align-content: flex-end;
+    width: 58%;
 }
 
 #imagen-reproductor > img {
     border: 1px solid blue;
-    width: 50%;
+    min-height: 100%;
+    
 }
 
 #opciones-reproductor{

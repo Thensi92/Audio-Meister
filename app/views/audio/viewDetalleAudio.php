@@ -5,21 +5,20 @@
         <div id="caja-datos-imagen-reproductor">    
             <div id="datos-audio">
 
-                <div class="ancho-input form-group">
+                <div class="form-group posicion-input">
                     <label for="nombreAudio">Nombre Audio</label>
-                    <input type="text" class="form-control" value="<?php echo $arrayDatos["nombre"];?>" disabled>
+                    <input type="text" class="form-control ancho-input" value="<?php echo $arrayDatos["nombre"];?>" disabled>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group posicion-input">
                     <label>Duracion</label>
-                    <input type="text" class="form-control" value="<?php echo $arrayDatos["duracion"];?>" disabled>
+                    <input type="text" class="form-control ancho-input" value="<?php echo $arrayDatos["duracion"];?>" disabled>
                 </div>
             </div>
-<!------------------------------- IMAGEN REPRODUCTOR---------------------------------------------------------------------------
+<!------------------------------- IMAGEN REPRODUCTOR----------------------------------------------------------------------------->
                 <div id="imagen-reproductor">
                     <img src="web/html/body/img/Poster1.png" class="img-fluid" alt="Imagen del reproductor">
                 </div>
--->
             </div>
 <!-------------------------------- BOTONES Y BARRA DE AUDIO ---------------------------------------------------------------------->
                 <div id="player">
