@@ -1,4 +1,7 @@
 <?php
+
+    echo "muestrate!"
+
     session_name('user');
     session_start();
 
