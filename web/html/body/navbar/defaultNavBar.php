@@ -1,3 +1,6 @@
+<?php
+require_once("app/controllers/audios/busquedaAudios.php");
+?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php"><img id="logo" src="web/html/body/img/logo.ico"></a>
