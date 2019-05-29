@@ -2,25 +2,23 @@
     session_name('user');
     session_start();
 
-    echo "test"
-
-    require_once("./web/html/includes/arrayGET/arrayGET.php");
-    require_once("./web/html/includes/arrayPOST/arrayPOST.php");
+    require_once("web/html/includes/arrayGET/arrayGET.php");
+    require_once("web/html/includes/arrayPOST/arrayPOST.php");
 
     //LINKS
-    require_once("./web/html/head/links/links.php");
+    require_once("web/html/head/links/links.php");
 
     //HEADER
-    require_once("./web/html/body/header/header.php");
+    require_once("web/html/body/header/header.php");
     
     //NAVBAR
     if(empty($_SESSION['datosUser'])){
-        require_once("./web/html/body/navbar/defaultNavBar.php");
+        require_once("web/html/body/navbar/defaultNavBar.php");
     }else{
         if($_SESSION['datosUser']['rol'] == "user"){
-            require_once("./web/html/body/navbar/navBarUser.php");
+            require_once("web/html/body/navbar/navBarUser.php");
         }else{
-            require_once("./web/html/body/navbar/navBarAdm.php");
+            require_once("web/html/body/navbar/navBarAdm.php");
         }
     }
 
@@ -33,7 +31,7 @@
                 }
             }
         }else{
-            require_once("./app/views/defaultView/indexView.php");
+            require_once("app/views/defaultView/indexView.php");
         }
     echo "</section>";
     
