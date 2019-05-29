@@ -1,5 +1,1 @@
-<div id="content">
-<header>
-
-
-</header>
+<header></header>

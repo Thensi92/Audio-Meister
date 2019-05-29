@@ -59,8 +59,15 @@
     align-content: flex-start
 }
 
-#imagen-reproductor {
+#imagen-reproductor{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+}
+
+#imagen-reproductor > img {
     border: 1px solid blue;
+    width: 50%;
 }
 
 #opciones-reproductor{
