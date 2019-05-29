@@ -2,7 +2,7 @@
 echo "navbar!";
 require_once("app/controllers/audios/busquedaAudios.php");
 ?>
-
+NO LLEGA!
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="index.php"><img id="logo" src="web/html/body/img/logo.ico"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
