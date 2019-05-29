@@ -2,6 +2,8 @@
     session_name('user');
     session_start();
 
+    echo "test"
+
     require_once("./web/html/includes/arrayGET/arrayGET.php");
     require_once("./web/html/includes/arrayPOST/arrayPOST.php");
 
