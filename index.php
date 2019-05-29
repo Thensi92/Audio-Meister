@@ -1,6 +1,6 @@
 <?php
 
-    echo "muestrate!"
+    echo "muestrate!";
 
     session_name('user');
     session_start();
