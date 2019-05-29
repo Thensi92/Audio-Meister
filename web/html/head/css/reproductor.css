@@ -56,13 +56,14 @@
     border: 2px solid black;
     display: flex;
     flex-flow: column wrap;
-    align-content: flex-start
+    align-content: flex-start;
 }
+
 
 #imagen-reproductor{
     display: flex;
     flex-flow: column wrap;
-    align-content: flex-start;
+    align-content: flex-end;
 }
 
 #imagen-reproductor > img {
