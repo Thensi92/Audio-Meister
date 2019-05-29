@@ -1,6 +1,9 @@
+
 DROP DATABASE IF EXISTS audio_meister;
 
 CREATE DATABASE IF NOT EXISTS audio_meister CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE audio_meister;
 
 CREATE TABLE IF NOT EXISTS Usuarios(
     correo VARCHAR(255),
@@ -44,11 +47,11 @@ CREATE TABLE IF NOT EXISTS Comentarios(
     CONSTRAINT fk_id_audio FOREIGN KEY (id_audio) REFERENCES Audios(id_audio) ON DELETE CASCADE
 );
 
-INSERT INTO tipos VALUES(1,'Podcast');
-INSERT INTO tipos VALUES(2,'NotaAudio');
-INSERT INTO tipos VALUES(3,'Musica');
+INSERT INTO Tipos VALUES(1,'Podcast');
+INSERT INTO Tipos VALUES(2,'NotaAudio');
+INSERT INTO Tipos VALUES(3,'Musica');
 
-INSERT INTO `usuarios` (
+INSERT INTO `Usuarios` (
     `correo`, 
     `nombre`, 
     `apodo`, 
@@ -63,7 +66,7 @@ INSERT INTO `usuarios` (
         'admin'
         );
 
-INSERT INTO `usuarios` (
+INSERT INTO `Usuarios` (
     `correo`, 
     `nombre`, 
     `apodo`, 
@@ -78,10 +81,10 @@ INSERT INTO `usuarios` (
         'user'
         );
 
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('BraveHeart', 'web/musica/usr@usr/BraveHeart.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Sono chino sadame', 'web/musica/usr@usr/JoJo.mp3', 'web/html/body/img/Poster1.png', '00:01:29','usr@usr', '3');
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Miracle', 'web/musica/usr@usr/02-Miracle.mp3', 'web/html/body/img/Poster1.png', '00:05:09','usr@usr', '3');
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('One Punch', 'web/musica/usr@usr/OnePunchMan2.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion1', 'web/musica/usr@usr/cancion1.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion2', 'web/musica//usr@usr/cancion2.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion3', 'web/musica/cancion3.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('BraveHeart', 'web/musica/usr@usr/BraveHeart.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Sono chino sadame', 'web/musica/usr@usr/JoJo.mp3', 'web/html/body/img/Poster1.png', '00:01:29','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Miracle', 'web/musica/usr@usr/02-Miracle.mp3', 'web/html/body/img/Poster1.png', '00:05:09','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('One Punch', 'web/musica/usr@usr/OnePunchMan2.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion1', 'web/musica/usr@usr/cancion1.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion2', 'web/musica//usr@usr/cancion2.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `Audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion3', 'web/musica/cancion3.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
