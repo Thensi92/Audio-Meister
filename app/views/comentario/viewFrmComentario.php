@@ -3,23 +3,9 @@
  ?>
         <div class="form-group">
         <label for="comment">Escribe el comentario:</label>
-        <textarea class="form-control" rows="5" cols="100"  name="comentario" required></textarea>
+        <textarea class="form-control" rows="3" cols="95"  name="comentario" required></textarea>
         </div>
-        <div clas="form-control">
-                    <label for="puntuacion">Puntuacion</label>
-                    <select class="custom-select" id="puntuacion" name="puntuacion" required>
-                        <option value="1" selected>1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-    <br>
+
+        
     <button type="submit" name="subirComentario" class="btn btn-primary">Subir</button>
 </form>

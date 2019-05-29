@@ -12,6 +12,7 @@
 #play{
     margin-bottom: 15px;
     cursor: pointer; /*Tipo de cursor */
+    background-color:royalblue;
 }
 
 /**** BARRA DE AUDIO ****/

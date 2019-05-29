@@ -51,6 +51,11 @@
         </div>
     </div>
 </div>
+
+<?php
+require_once("app/controllers/comentario/controllerViewFrmComentario.php");
+require_once("app/controllers/comentario/controllerVerComentarios.php");
+?>
 <!------------------------SCRIPT REPRODUCTOR ----------------------------------------------------------------------------------->
 <script type="text/javascript">
     var songTitle = document.getElementById("songTitle");
