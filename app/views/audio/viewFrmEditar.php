@@ -37,9 +37,51 @@
                                         <option value="3" selected>Musica</option>';
                             }
                         ?> 
-                        
-                        
                     </select>
+
+                     <div class="form-group">
+                        <label for="visibilidad">Visibilidad</label>
+                            <select class="custom-select" id="visibilidad" name="visibilidad">
+                                <?php
+                                    $visibilidad = $arrayDatos["visibilidad"];
+                                    if($visibilidad == "publico"){ 
+                                        echo '<option value="publico" selected>Publico</option>
+                                              <option value="privado">Privado</option>';
+                                    }else if($visibilidad == "privado"){
+                                        echo '<option value="publico">Publico</option>
+                                              <option value="privado" selected>Privado</option>';
+                                    }
+                                ?>
+                            </select>
+                      </div>
+
+                      <div class="form-group">
+                            <label>Imagen</label>
+                            <select class="custom-select" id="imagen" name="imagen">
+                            <?php
+                                $rutaImagen = $arrayDatos["rutaImagen"];
+
+                                if($rutaImagen == "web/html/body/img/Poster1.png"){
+                                    echo '<option value="web/html/body/img/Poster1.png" selected>Imagen 1</option>
+                                          <option value="web/html/body/img/Poster2.png">Imagen 2</option>
+                                          <option value="web/html/body/img/Poster3.png">Imagen 3</option>';
+                                
+                                }else if($rutaImagen == "web/html/body/img/Poster2.png"){
+                                   
+                                    echo '<option value="web/html/body/img/Poster1.png">Imagen 1</option>
+                                          <option value="web/html/body/img/Poster2.png" selected>Imagen 2</option>
+                                          <option value="web/html/body/img/Poster3.png">Imagen 3</option>';
+
+                                }else if($rutaImagen == "web/html/body/img/Poster3.png"){
+                                    
+                                    echo '<option value="web/html/body/img/Poster1.png">Imagen 1</option>
+                                          <option value="web/html/body/img/Poster2.png">Imagen 2</option>
+                                          <option value="web/html/body/img/Poster3.png" selected>Imagen 3</option>';
+
+                                }
+                            ?>
+                            </select>
+                      </div>
                     <button type="submit" name="editar_audio" class="btn btn-primary">Editar</button>
                 </div>
                 <a class="btn btn-danger" href="index.php?ctl=verMsg&ctlSecundario=eliminarAudio" role="button">Borrar</a>

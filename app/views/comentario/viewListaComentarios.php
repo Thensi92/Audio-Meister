@@ -18,7 +18,7 @@
                     
                     if(isset($_SESSION["datosUser"])){
                         if($correo == $_SESSION["datosUser"]["correo"]){
-                            echo '<a href="index.php?ctl=borrarComentario&id='.$idAudio.'&idComentario='.$idComentario.'" class="btn btn-danger">Borrar Comentario</a>';
+                            echo '<a href="index.php?ctl=verMsg&ctlSecundario=borrarComentario&id='.$idAudio.'&idComentario='.$idComentario.'" class="btn btn-danger">Borrar Comentario</a>';
                         }
                     }
                     

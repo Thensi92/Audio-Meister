@@ -15,5 +15,9 @@
     $puntuacion = $_POST["puntuacion"];
     $descripcion = $_POST["comentario"];
     $resultado = $conexion->subirComentario($descripcion,$correo,$idAudio,$puntuacion);
-    header("Location:index.php?ctl=verComentarios&id=$idAudio");
+    if($resultado == "Exito"){
+        header("Location:index.php?ctl=verComentarios&id=$idAudio");
+    }else{
+        header("Location:index.php?ctl=verMsgError&ctlSecundario=ver_frmSubida&ctlError=falloSubida");
+    }  
 ?>
