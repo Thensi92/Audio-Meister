@@ -1,5 +1,5 @@
 <?php
- echo '<form id="form" action="index.php?ctl=up&idAudio='.$idAudio.'&correo='.$usuario.' " method="post" >';
+ echo '<form id="subida-comentarios" action="index.php?ctl=up&idAudio='.$idAudio.'&correo='.$usuario.' " method="post" >';
  ?>
         <div class="form-group">
         <label for="comment">Escribe el comentario:</label>

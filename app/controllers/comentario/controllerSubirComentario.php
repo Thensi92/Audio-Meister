@@ -12,8 +12,7 @@
 
     $correo = $_GET["correo"];
     $idAudio = $_GET["idAudio"];
-    $puntuacion = $_POST["puntuacion"];
     $descripcion = $_POST["comentario"];
-    $resultado = $conexion->subirComentario($descripcion,$correo,$idAudio,$puntuacion);
-    header("Location:index.php?ctl=verComentarios&id=$idAudio");
+    $resultado = $conexion->subirComentario($descripcion,$correo,$idAudio,1);
+    header("Location:index.php?ctl=detalleAudio&id=$idAudio");
 ?>
