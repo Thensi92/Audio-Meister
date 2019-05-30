@@ -1,5 +1,10 @@
 <?php
-    class Comentario extends Conexion{
+
+    Class Comentario extends Conexion {
+
+        function __construct($host,$usu,$pass,$db){
+            parent:: __construct($host,$usu,$pass,$db);
+        }
 
         public function subirComentario($descripcion,$correoUser,$id_audio,$puntuacion){
             $sql = "INSERT INTO comentarios (correo,descripcion,id_audio,puntuacion) VALUES(?,?,?,?)";

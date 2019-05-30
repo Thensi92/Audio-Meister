@@ -13,9 +13,9 @@
     $correo = $_GET["correo"];
     $idAudio = $_GET["idAudio"];
     $descripcion = $_POST["comentario"];
-    $resultado = $conexion->subirComentario($descripcion,$correo,$idAudio,$puntuacion);
+    $resultado = $conexion->subirComentario($descripcion,$correo,$idAudio,1);
     if($resultado == "Exito"){
-        header("Location:index.php?ctl=verComentarios&id=$idAudio");
+        header("Location:index.php?ctl=detalleAudio&id=$idAudio");
     }else{
         header("Location:index.php?ctl=verMsgError&ctlSecundario=ver_frmSubida&ctlError=falloSubida");
     }  
