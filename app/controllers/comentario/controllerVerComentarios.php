@@ -2,7 +2,7 @@
      //include "app/db/config.php";
      //include "app/models/conexion/model_conexion_BBDD.php";
      include "app/models/comentario/model_comentario.php";
- 
+
      $metConexion = Config::$metodoConexion;
      $user= Config::$usuario;
      $contra = Config::$contraseña;
@@ -12,7 +12,6 @@
      $pagination = new PDO_Pagination($conexion);
      $id = $_GET["id"];
 
-    
      $pagination->rowCount("SELECT * FROM Comentarios WHERE id_audio = $id ");
      $pagination->config(3, 99);
      
