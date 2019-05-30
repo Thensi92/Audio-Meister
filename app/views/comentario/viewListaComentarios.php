@@ -1,16 +1,18 @@
 <?php
+    $con = new Usuario(Config::$metodoConexion,Config::$usuario,Config::$contraseña,Config::$nombreBaseDatos);
     foreach($model as $row){
-
         $correo = $row["correo"];
         $descripcion = $row["descripcion"];
         $idAudio = $row["id_audio"];
         $idComentario = $row["id_comentario"];
 
+        $apodo = $con->getApodo($correo);
+        
         if(!empty($_SESSION['datosUser'])){
             echo "<div id=caja-comentarios>";
                 echo "<div class=card>";
                     echo "<div class=card-header>";
-                        echo "$correo";
+                        echo "$apodo";
                     echo "</div>";
                 echo "<div class='card-body'>";
                     echo "<p class='card-text'>$descripcion</p>";
