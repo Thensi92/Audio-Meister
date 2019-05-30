@@ -36,14 +36,14 @@
                 $url = $arrayDatos["rutaAudio"];
                 $nombre = $arrayDatos["nombre"];
                 $id = $arrayDatos["id"];
-
-                echo '<div id="opciones-reproductor">
-                <button type="button" class="opcion btn btn-light"><a href=\'index.php?ctl=descargaAudio&url=$url&nombre=$nombre\'>Descargar</a></button>
-                <button type="button" class="opcion btn btn-light"><a href="index.php?ctl=verComentarios&id='.$id.'">Ver Comentarios</a></button>';
+                
+                echo "<div id=opciones-reproductor>";
+                echo "<button type=button class=opcion btn btn-light><a href=index.php?ctl=descargaAudio&url=$url&nombre=$nombre>Descargar</a></button>";
+                echo "<button type=button class=opcion btn btn-light><a href=#>Ver Comentarios</a></button>";
                     //Si esta logeado muestra la opcion de subir el Audio
                     if(isset($_SESSION["datosUser"]))
                     {
-                        echo '<button type="button" class="opcion btn btn-light"><a href="index.php?ctl=verFrmComentario&id='.$id.'">Subir Comentarios</a></button>';
+                        echo '<button type="button" class="opcion btn btn-light"><a href="#">Subir Comentarios</a></button>';
                     } 
                 echo '</div>';
             ?>
