@@ -4,6 +4,9 @@
     padding: 25px;
     color:#333;
     display: flex;
+    
+    margin-left: 10px;
+    margin-right: 10px;
     flex-flow: column wrap;
     align-content: center;
     align-items: center;
@@ -46,6 +49,8 @@
     width: 81%;
     margin: auto auto;
     margin-top: 10px;
+    background-color:#3333;
+    border-radius: 10px;
 }
 
 #caja-datos-imagen-reproductor{
@@ -53,6 +58,8 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 2px solid yellow;
 }
 
@@ -92,6 +99,8 @@
     flex-flow: row wrap;
     justify-content: center;
     border: 1px solid orangered;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 50px;
 }
 
