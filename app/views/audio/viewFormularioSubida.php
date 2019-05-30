@@ -14,9 +14,6 @@
         </select>
     </div>
 
-    <div id="div.file" class="form-group">
-        <input type="file" name="archivoAudio" id="archivo" required>
-    </div>
     
     <div class="form-group">
         <label for="visibilidad">Visibilidad</label>
@@ -34,6 +31,9 @@
             <option value="web/html/body/img/Poster3.png">Imagen 3</option>
         </select>
     </div>
-
+    
+    <div id="div.file" class="form-group">
+        <input type="file" name="archivoAudio" id="archivo" required>
+    </div>
     <button type="submit" name="insertar_audio" class="btn btn-primary">Subir</button>
 </form>
