@@ -1,8 +1,11 @@
+
 DROP DATABASE IF EXISTS audio_meister;
 
 CREATE DATABASE IF NOT EXISTS audio_meister CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-CREATE TABLE IF NOT EXISTS Usuarios(
+USE audio_meister;
+
+CREATE TABLE IF NOT EXISTS usuarios(
     correo VARCHAR(255),
     nombre VARCHAR(255),
     apodo VARCHAR(255),
@@ -12,13 +15,13 @@ CREATE TABLE IF NOT EXISTS Usuarios(
     PRIMARY KEY (correo)
 );
 
-CREATE TABLE IF NOT EXISTS Tipos(
+CREATE TABLE IF NOT EXISTS tipos(
     id_tipo int,
     tipo VARCHAR(255),
     PRIMARY KEY(id_tipo)
 );
 
-CREATE TABLE IF NOT EXISTS Audios(
+CREATE TABLE IF NOT EXISTS audios(
     id_audio int AUTO_INCREMENT,
     nombre_audio VARCHAR(255),
     ruta_audio VARCHAR(255),
@@ -27,10 +30,10 @@ CREATE TABLE IF NOT EXISTS Audios(
     fecha_subida TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     correo VARCHAR(255),
     id_tipo int,
-    visibilidad VARCHAR(255),
     PRIMARY KEY (id_audio),
-    CONSTRAINT fk_correo FOREIGN KEY (correo) REFERENCES Usuarios(correo) ON DELETE CASCADE,
-    CONSTRAINT fk_id_tipo FOREIGN KEY (id_tipo) REFERENCES Tipos(id_tipo)
+    visibilidad VARCHAR(255),
+    CONSTRAINT fk_correo FOREIGN KEY (correo) REFERENCES usuarios(correo) ON DELETE CASCADE,
+    CONSTRAINT fk_id_tipo FOREIGN KEY (id_tipo) REFERENCES tipos(id_tipo)
 );
 
 CREATE TABLE IF NOT EXISTS Comentarios(
@@ -41,8 +44,8 @@ CREATE TABLE IF NOT EXISTS Comentarios(
     id_audio int,
     correo VARCHAR(255),
     PRIMARY KEY (id_comentario),
-    CONSTRAINT fk_comentario_correo FOREIGN KEY (correo) REFERENCES Usuarios(correo) ON DELETE CASCADE,
-    CONSTRAINT fk_id_audio FOREIGN KEY (id_audio) REFERENCES Audios(id_audio) ON DELETE CASCADE
+    CONSTRAINT fk_comentario_correo FOREIGN KEY (correo) REFERENCES usuarios(correo) ON DELETE CASCADE,
+    CONSTRAINT fk_id_audio FOREIGN KEY (id_audio) REFERENCES audios(id_audio) ON DELETE CASCADE
 );
 
 INSERT INTO tipos VALUES(1,'Podcast');
@@ -79,10 +82,10 @@ INSERT INTO `usuarios` (
         'user'
         );
 
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('BraveHeart', 'web/musica/usr@usr/BraveHeart.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3',"publico");
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('Sono chino sadame', 'web/musica/usr@usr/JoJo.mp3', 'web/html/body/img/Poster1.png', '00:01:29','usr@usr', '3',"publico");
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('Miracle', 'web/musica/usr@usr/02-Miracle.mp3', 'web/html/body/img/Poster1.png', '00:05:09','usr@usr', '3',"publico");
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('One Punch', 'web/musica/usr@usr/OnePunchMan2.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3',"publico");
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('Cancion1', 'web/musica/usr@usr/cancion1.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3',"privado");
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('Cancion2', 'web/musica//usr@usr/cancion2.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3',"privado");
-INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`,`visibilidad`) VALUES ('Cancion3', 'web/musica/cancion3.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3',"privado");
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('BraveHeart', 'web/musica/usr@usr/BraveHeart.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Sono chino sadame', 'web/musica/usr@usr/JoJo.mp3', 'web/html/body/img/Poster1.png', '00:01:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Miracle', 'web/musica/usr@usr/02-Miracle.mp3', 'web/html/body/img/Poster1.png', '00:05:09','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('One Punch', 'web/musica/usr@usr/OnePunchMan2.mp3', 'web/html/body/img/Poster1.png', '00:04:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion1', 'web/musica/usr@usr/cancion1.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion2', 'web/musica//usr@usr/cancion2.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
+INSERT INTO `audios` (`nombre_audio`, `ruta_audio`,`ruta_imagen_audio`, `duracion`,`correo`, `id_tipo`) VALUES ('Cancion3', 'web/musica/cancion3.mp3', 'web/html/body/img/Poster1.png', '00:02:29','usr@usr', '3');
