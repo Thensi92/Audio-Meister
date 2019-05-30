@@ -4,6 +4,10 @@
 <!-------------------------------- DETALLES DEL USUARIO -------------------------------------------------------------------------->
         <div id="caja-datos-imagen-reproductor">    
             <div id="datos-audio">
+                <div class="form-group posicion-input">
+                    <label for="nombreAudio">Apodo</label>
+                    <input type="text" class="form-control ancho-input" value="<?php echo $apodo;?>" disabled>
+                </div>
 
                 <div class="form-group posicion-input">
                     <label for="nombreAudio">Nombre Audio</label>
@@ -17,7 +21,7 @@
             </div>
 <!------------------------------- IMAGEN REPRODUCTOR----------------------------------------------------------------------------->
                 <div id="imagen-reproductor">
-                    <img src="web/html/body/img/Poster1.png" class="img-fluid" alt="Imagen del reproductor">
+                    <img src="<?php echo $arrayDatos["rutaImagen"]; ?>" class="img-fluid" alt="Imagen del reproductor">
                 </div>
             </div>
 <!-------------------------------- BOTONES Y BARRA DE AUDIO ---------------------------------------------------------------------->
