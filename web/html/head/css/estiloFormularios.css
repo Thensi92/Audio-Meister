@@ -12,6 +12,10 @@
 }
 
 #opciones-edicion{
-    border: 1px solid black;
-    display: flex
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#opciones-edicion > button {
+    margin-right: 20px;
 }
