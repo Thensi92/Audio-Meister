@@ -54,3 +54,24 @@
     display: flex;
     margin-bottom: 40px;
 }
+
+#caja-comentarios{
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#subida-comentarios{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#separador-footer{
+    margin-top: 20px;
+}

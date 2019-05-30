@@ -1,0 +1,60 @@
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #imagen-reproductor{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        width: 50%;
+        min-height: 50%;
+        }
+    
+        #imagen-reproductor > img {
+        border: 1px solid blue;
+        margin-right: 1%;
+        border-radius: 10px;
+        width: 50%;
+        }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #imagen-reproductor{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    width: 50%;
+    min-height: 50%;
+    }
+
+    #imagen-reproductor > img {
+    border: 1px solid blue;
+    margin-right: 1%;
+    border-radius: 10px;
+    width: 50%;
+    }
+}
+
+#opciones-reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: 1px solid orangered;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    #imagen-reproductor{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    width: 10%;
+    }
+
+    #imagen-reproductor > img {
+    border: 1px solid blue;
+    margin-right: 1%;
+    border-radius: 10px;
+    }
+  
+}

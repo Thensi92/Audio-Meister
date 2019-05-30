@@ -15,10 +15,10 @@ $search = null;
         $search = htmlspecialchars($_REQUEST["search"]);
 
         $pagination->param = "&search=$search";
-        $pagination->rowCount("SELECT * FROM audios WHERE nombre_audio LIKE '%$search%' ");
+        $pagination->rowCount("SELECT * FROM audios WHERE nombre_audio LIKE '%$search%' AND visibilidad = 'publico' ");
         $pagination->config(2, 16);
 
-        $sql = "SELECT * FROM audios WHERE nombre_audio LIKE '%$search%' ORDER BY fecha_subida ASC LIMIT $pagination->start_row, $pagination->max_rows";
+        $sql = "SELECT * FROM audios WHERE nombre_audio LIKE '%$search%' AND visibilidad = 'publico' ORDER BY fecha_subida ASC LIMIT $pagination->start_row, $pagination->max_rows";
         $query = $connection->prepare($sql);
         $query->execute();
 
@@ -31,7 +31,7 @@ $search = null;
         $pagination->rowCount("SELECT * FROM audios");
         $pagination->config(2, 8);
         
-        $sql = "SELECT * FROM audios ORDER BY fecha_subida ASC LIMIT $pagination->start_row, $pagination->max_rows";
+        $sql = "SELECT * FROM audios WHERE visibilidad = 'publico' ORDER BY fecha_subida ASC LIMIT $pagination->start_row, $pagination->max_rows";
         $query = $connection->prepare($sql);
         $query->execute();
         $model = array();
