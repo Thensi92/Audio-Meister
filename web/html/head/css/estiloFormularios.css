@@ -10,3 +10,8 @@
 #div\.file{
     margin-top: 25px;
 }
+
+#opciones-edicion{
+    border: 1px solid black;
+    display: flex
+}
