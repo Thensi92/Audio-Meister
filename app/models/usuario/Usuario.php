@@ -8,14 +8,15 @@
             $this->conexionUsuario = new Conexion($host, $user, $passwd, $nameDB);
         }
 
-        public function getApodo($correo, $pass){
+        public function getApodo($correo){
             $stmt = $this->conexionUsuario->conexion->prepare(
-                "SELECT apodo FROM usuarios WHERE correo = ? AND passwd = ?");
+                "SELECT apodo FROM usuarios WHERE correo = ?");
 
             if($stmt){
-                $stmt->bind_param("ss", $correo, $passwd);
+                $stmt->bind_param("s", $correo);
                 $stmt->execute();
                 $stmt->bind_result($apodo);
+                $stmt->fetch();
             }
             $stmt->close();
 

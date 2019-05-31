@@ -13,5 +13,5 @@
     $idComentario = $_GET["idComentario"];
     $idCasteado = (int) $idComentario;
     $resultado = $conexion->borrarComentario($idCasteado);
-    header("Location:index.php?ctl=verComentarios&id=$idAudio");
+    header("Location:index.php?ctl=detalleAudio&id=$idAudio");
 ?>

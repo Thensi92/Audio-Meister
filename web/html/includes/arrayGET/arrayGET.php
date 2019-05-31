@@ -23,7 +23,9 @@ $arrayGET = [
     'eliminarUserAdmin' => "app/controllers/admin/controllerBorrarUsuario.php",
     'verComentarios' => "app/controllers/comentario/controllerVerComentarios.php",
     'verFrmComentario' => "app/controllers/comentario/controllerViewFrmComentario.php",
-    'borrarComentario' => "app/controllers/comentario/controllerBorrarComentario.php"
+    'borrarComentario' => "app/controllers/comentario/controllerBorrarComentario.php",
+    'verMsg' => "app/controllers/admin/controllerConfirm.php",
+    'verMsgError' => "app/controllers/errores/controllerError.php"
 ];
 
 ?>
