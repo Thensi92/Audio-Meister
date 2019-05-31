@@ -24,7 +24,7 @@
 
     $resCount = $conexionCount->getOwnAudios($correoUser);
     $tipoUsuario = $_SESSION["datosUser"]["modalidad"];
-    if( $tipoUsuario == "Free" && count($resCount) >=3 ){
+    if( $tipoUsuario == "Free" && $resCount >=3 ){
         $conexion->cerrarConexion();
         $conexionCount->cerrarConexion();
         header("Location:index.php?ctl=verMsgError&ctlSecundario=ver_frmSubida");
