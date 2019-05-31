@@ -35,6 +35,10 @@ $_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
 
 if(isset($_SESSION['datosUser']['correo'])){
     $carpeta = "web/musica/".$_SESSION['datosUser']['correo'];
+    // Crea la carpeta raiz de musica si esta no existe.
+    if(!is_dir("web/musica/")){
+        mkdir("web/musica/");
+    }
     if(!file_exists($carpeta)){
         mkdir($carpeta);
     }
