@@ -1,3 +1,6 @@
+<?php
+    include "app/controllers/audio/controller_errorUsuarioAudio.php";
+?>
 <form id="form" action="index.php?ctl=insertar_audio&tipoOperacion=añadir" method="post" enctype="multipart/form-data">
 
     <div class="form-group">

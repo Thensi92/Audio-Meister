@@ -22,24 +22,14 @@
     $visibilidad = $_POST["visibilidad"];
     $imagen = $_POST["imagen"];
 
-    $resCount = $conexion->getOwnAudios($correoUser);
-    $tipoUsuario = $_SESSION["datosUser"]["modalidad"];
-    if( $tipoUsuario == "Free" && $resCount >=3 ){
-        $conexion->cerrarConexion();
-        //$conexionCount->cerrarConexion();
-        //echo $resCount;
-        header("Location:index.php?ctl=verMsgError&ctlSecundario=ver_frmSubida");
-    }else{
-        $resultado = $conexion->subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$correoUser,$tipoArchivo,$imagen,$visibilidad);
-        $conexion->cerrarConexion();
-        //$conexionCount->cerrarConexion();
-        if($resultado == "Exito"){
-            header("Location:index.php?ctl=verOwnAudios");
-        }else{
-            //echo $resCount;
-            //echo $resultado;
-            header("Location:index.php?ctl=verMsgError&ctlSecundario=ver_frmSubida&ctlError=falloSubida");
-        }
+   
+    $resultado = $conexion->subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$correoUser,$tipoArchivo,$imagen,$visibilidad);
+    $conexion->cerrarConexion();
         
+    if($resultado == "Exito"){
+        header("Location:index.php?ctl=verOwnAudios");
+    }else{
+        header("Location:index.php?ctl=verMsgError&ctlSecundario=ver_frmSubida&ctlError=falloSubida&mensaje=$resultado");
     }
+        
 ?>
