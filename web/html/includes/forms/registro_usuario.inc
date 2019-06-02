@@ -5,7 +5,7 @@
             <label for="correo">Correo</label>
             <input type="email" class="form-control" name="correo" id="correo" required>
         </div>
-        
+
         <div class="form-group">
             <label for="nombre">Nombre</label>
             <input type="text" class="form-control" name="nombre" id="nombre" required>
@@ -29,6 +29,15 @@
             </select>
         </div>
 
-        <input type="submit" class="btn btn-primary" name="registrar_usuario" value="Registrar usuario">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkTermsOfUse">
+            <label class="form-check-label" for="checkTermsOfUse">
+                Al registrarme, acepto <a href="#">los términos de uso</a>.
+            </label>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" name="registrar_usuario" value="Registrar usuario" id="submit" disabled>
     </fieldset>
 </form>
+
+<script src="web/scripts/registration_terms_of_use.js"></script>
