@@ -17,6 +17,8 @@
     $conectionUser->cerrarConexion();
 
     if($eliminado){
+
+        eliminar_directorio("web/musica/".$correo."/");
         $mensaje = 'Se ha eliminado con éxito.</a>';
         unset($_POST);
         header("Location: index.php?ctl=desconectar");
@@ -26,5 +28,19 @@
         //require_once("app/views/usuario/EliminarUsuarioView.php");
         echo $mensaje;
     }
- 
+
+    function eliminar_directorio($dir){
+        $directorio = opendir($dir);
+        while ($archivo = readdir($directorio)){
+            if( $archivo !='.' && $archivo !='..' ){
+                if ( is_dir( $dir.$archivo ) ) {
+                    eliminar_directorio( $dir.$archivo );
+                }
+            unlink($dir."/".$archivo);
+            }
+        }
+        closedir($directorio);
+        rmdir($dir);
+    }
+
 ?>
