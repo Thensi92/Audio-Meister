@@ -20,6 +20,7 @@
     $rutaArchivoAntiguo = $_SESSION["audioBorrar"]["ruta"] ;
     $imagen = $_POST["imagen"];
     $visibilidad = $_POST["visibilidad"];
+    $visibilidadInt = (int) $visibilidad;
 
     if(!empty($_FILES["archivoAudio"]["type"] )){
         $formatoArchivo = $_FILES["archivoAudio"]["type"];
@@ -34,7 +35,7 @@
         $nArchivo= "null";
     }
                                         
-    $resultado = $conexion->editarAudio($id,$nombre,$correoUser,$tipoArchivo,$boolEditarAudio,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$rutaArchivoAntiguo,$imagen,$visibilidad);
+    $resultado = $conexion->editarAudio($id,$nombre,$correoUser,$tipoArchivo,$boolEditarAudio,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$rutaArchivoAntiguo,$imagen,$visibilidadInt);
     $conexion->cerrarConexion();
     if($resultado == "Exito"){
         header("Location:index.php?ctl=verOwnAudios");

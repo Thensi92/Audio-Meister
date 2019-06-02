@@ -19,7 +19,7 @@
     $correoUser = $_SESSION["datosUser"]["correo"];
     $tipoArchivo = $_POST["tipoAudio"];
     $nArchivo= $_FILES['archivoAudio']['name'];
-    $visibilidad = $_POST["visibilidad"];
+    $visibilidad = (int)$_POST["visibilidad"];
     $imagen = $_POST["imagen"];
 
    

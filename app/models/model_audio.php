@@ -34,7 +34,7 @@
                             $sql ="INSERT INTO audios (nombre_audio, ruta_audio, ruta_imagen_audio, duracion, correo, id_tipo, visibilidad) VALUES (?,?,?,?,?,?,?)";
                             
                             $resultado = $this->conexion->prepare($sql);
-                            $resultado->bind_param("sssssis",$nombre,$rutaDefinitiva,$rutaImagen,$duracion,$correoUser,$tipoCasteado,$visibilidad);
+                            $resultado->bind_param("sssssii",$nombre,$rutaDefinitiva,$rutaImagen,$duracion,$correoUser,$tipoCasteado,$visibilidad);
                             $resultado->execute();
                             if($resultado->affected_rows == 1){
                                 $mensaje = "Exito"; 
@@ -133,7 +133,7 @@
 
                                  $sql ="UPDATE  audios SET nombre_audio = ? , ruta_audio = ?, ruta_imagen_audio = ?, duracion =? , id_tipo=? , visibilidad =? WHERE correo = ? AND id_audio = ?";
                                  $resultado = $this->conexion->prepare($sql);
-                                 $resultado->bind_param("ssssissi",$nombre,$rutaDefinitiva,$rutaImagen,$duracion,$tipoCasteado,$visibilidad,$correoUser,$id);
+                                 $resultado->bind_param("ssssiisi",$nombre,$rutaDefinitiva,$rutaImagen,$duracion,$tipoCasteado,$visibilidad,$correoUser,$id);
                                  $resultado->execute();
                                 
                                  if($resultado->affected_rows == 1){
@@ -154,7 +154,7 @@
             }else{
                 $sql = "UPDATE audios SET nombre_audio = ? , id_tipo = ?, ruta_imagen_audio = ? , visibilidad = ?   WHERE correo = ? AND id_audio = ?";
                 $resultado = $this->conexion->prepare($sql);
-                $resultado->bind_param("sisssi",$nombre,$tipoCasteado,$rutaImagen,$visibilidad,$correoUser,$id);
+                $resultado->bind_param("sisisi",$nombre,$tipoCasteado,$rutaImagen,$visibilidad,$correoUser,$id);
                 $resultado->execute();
 
                 if($resultado->affected_rows == 1){
