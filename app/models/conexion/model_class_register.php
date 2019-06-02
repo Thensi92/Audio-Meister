@@ -14,6 +14,7 @@ Class Register extends Conexion {
         $passwd;
         $modalidad;
         $rol = "user"; //POR DEFECTO
+        $filasAfectadas;
         
         for($i = 0; $i < count($arrayDatosUser);$i++){
             if($i == 0){
@@ -39,8 +40,10 @@ Class Register extends Conexion {
         $stmt->bind_param("ssssss",$correo,$nombre,$apodo,$passwd,$modalidad,$rol);
 
         $stmt->execute();
+        $filasAfectadas = $stmt->affected_rows;
         $stmt->close();
 
+        return $filasAfectadas;
     }
 
     public function cerrarConexion(){
