@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label for="pass">Contraseña</label><br>
-            <input type="password" class="form-control" name="passwd" id="passwd" value="<?=$_SESSION['datosUser']['passwd']?>" required><br><br>
+            <input type="password" class="form-control" name="passwd" id="passwd" required><br><br>
         </div>
 
         <input type="submit" class="btn btn-primary" name="editar_usuario" value="Aceptar">
