@@ -28,21 +28,25 @@ $arrayDatosUser = array(
     $modalidad
 );
 
-$registro->registarUsuario($arrayDatosUser);
+$filasAfectadas = $registro->registarUsuario($arrayDatosUser);
 $registro->cerrarConexion();
 
-$_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
+if($filasAfectadas == 1){
+    $_SESSION['datosUser'] = $login->loginUsuario($correo, $passwd);
 
-if(isset($_SESSION['datosUser']['correo'])){
-    $carpeta = "web/musica/".$_SESSION['datosUser']['correo'];
-    // Crea la carpeta raiz de musica si esta no existe.
-    if(!is_dir("web/musica/")){
-        mkdir("web/musica/");
+    if(isset($_SESSION['datosUser']['correo'])){
+        $carpeta = "web/musica/".$_SESSION['datosUser']['correo'];
+        // Crea la carpeta raiz de musica si esta no existe.
+        if(!is_dir("web/musica/")){
+            mkdir("web/musica/");
+        }
+        if(!file_exists($carpeta)){
+            mkdir($carpeta);
+        }
+        header("Location:index.php");
     }
-    if(!file_exists($carpeta)){
-        mkdir($carpeta);
-    }
-    header("Location:index.php");
+}else{
+    require_once("app/views/errores/errorRegistro.php");
 }
 
 ?>
