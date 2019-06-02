@@ -31,7 +31,10 @@ CREATE TABLE IF NOT EXISTS audios(
     correo VARCHAR(255),
     id_tipo int,
     PRIMARY KEY (id_audio),
+<<<<<<< HEAD
     visibilidad VARCHAR(255),
+=======
+>>>>>>> 94e1a77b0b49b11df632162707619a39828db42c
     CONSTRAINT fk_correo FOREIGN KEY (correo) REFERENCES usuarios(correo) ON DELETE CASCADE,
     CONSTRAINT fk_id_tipo FOREIGN KEY (id_tipo) REFERENCES tipos(id_tipo)
 );
