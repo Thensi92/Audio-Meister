@@ -39,12 +39,12 @@
             <select class="custom-select" id="visibilidad" name="visibilidad">
                 <?php
                                     $visibilidad = $arrayDatos["visibilidad"];
-                                    if($visibilidad == "publico"){ 
-                                        echo '<option value="publico" selected>Publico</option>
-                                        <option value="privado">Privado</option>';
-                                    }else if($visibilidad == "privado"){
-                                        echo '<option value="publico">Publico</option>
-                                        <option value="privado" selected>Privado</option>';
+                                    if($visibilidad == 1){ 
+                                        echo '<option value="1" selected>Publico</option>
+                                        <option value="0">Privado</option>';
+                                    }else if($visibilidad == 0){
+                                        echo '<option value="1">Publico</option>
+                                        <option value="0" selected>Privado</option>';
                                     }
                                     ?>
             </select>
