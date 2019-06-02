@@ -10,6 +10,7 @@
             
             $tipoCasteado = (int)$tipo;
             $codigo = rand(1,1000);
+
             if(file_exists($rutaDefinitiva)){
                 copy($rutaDefinitiva,$rutaConst.$codigo.$nArchivo);
                 $rutaDefinitiva = $rutaConst.$codigo.$nArchivo;
@@ -29,7 +30,6 @@
                             $file = $getID3->analyze($filename); 
                             $playtime_seconds = $file['playtime_seconds'];
                             $duracion = gmdate("H:i:s",$playtime_seconds);
-
         
                             $sql ="INSERT INTO audios (nombre_audio, ruta_audio, ruta_imagen_audio, duracion, correo, id_tipo, visibilidad) VALUES (?,?,?,?,?,?,?)";
                             
