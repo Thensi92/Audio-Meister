@@ -1,6 +1,5 @@
 /**** BOTON DE PLAY O PAUSE ****/
 #player{
-    border: 2px solid darkmagenta;
     padding: 25px;
     color:#333;
     display: flex;
@@ -46,7 +45,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 81%;
+    width: 91%;
     margin: auto auto;
     margin-top: 10px;
     background-color:#3333;
@@ -60,17 +59,15 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border: 2px solid yellow;
 }
 
 #datos-audio{
-    border: 2px solid black;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
     align-items: center;
-    width: 41%;
-    margin-right: 1%;
+    width: 40%;
+    margin-right: 2%;
     text-align: center;
 }
 
@@ -87,7 +84,6 @@
 }
 
 #imagen-reproductor > img {
-    border: 1px solid blue;
     margin-right: 1%;
     border-radius: 10px;
     min-height: 100%;
@@ -98,7 +94,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    border: 1px solid orangered;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 50px;
