@@ -2,7 +2,7 @@ window.onload = function () {
 
     let checkboxTermsOfUse = document.getElementById("checkTermsOfUse");
     let submitRegister = document.getElementById("submit");
-
+    
     checkboxTermsOfUse.addEventListener("click", isChecked);
 
     function isChecked() {
@@ -13,8 +13,3 @@ window.onload = function () {
         }
     }
 }
-
-
-
-
-
