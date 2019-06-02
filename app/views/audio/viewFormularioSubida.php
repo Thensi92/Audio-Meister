@@ -21,8 +21,8 @@
     <div class="form-group">
         <label for="visibilidad">Visibilidad</label>
         <select class="custom-select" id="visibilidad" name="visibilidad">
-            <option value="publico" selected>Publico</option>
-            <option value="privado">Privado</option>
+            <option value="1" selected>Publico</option>
+            <option value="0">Privado</option>
         </select>
     </div>
     

@@ -50,11 +50,6 @@
     margin-bottom: 50px;
 }
 
-#gestionesAdmin {
-    display: flex;
-    margin-bottom: 40px;
-}
-
 #caja-comentarios{
     display: flex;
     flex-flow: column wrap;
@@ -74,4 +69,8 @@
 
 #separador-footer{
     margin-top: 20px;
+}
+
+#gestionesAdmin{
+    margin-bottom: 40px;
 }
