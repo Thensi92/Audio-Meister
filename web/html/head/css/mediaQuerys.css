@@ -1,4 +1,113 @@
-/********** MOBILE PORTAIBLE *************/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    /**** BOTON DE PLAY O PAUSE ****/
+    #player{
+        padding: 25px;
+        color:#333;
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-flow: column wrap;
+        align-content: center;
+        align-items: center;
+    }
+
+    #play{
+        margin-bottom: 15px;
+        cursor: pointer; /*Tipo de cursor */
+        background-color:royalblue;
+    }
+
+    /**** BARRA DE AUDIO ****/
+    #seek-bar{
+        width: 50%;
+        height: 5px;
+        background-color:gray;
+        display: flex;
+        border-radius: 50px;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+    #fill{
+        height: 5px;
+        background-color:royalblue;
+        border-radius: 20px;
+    }
+    #handle{
+        width: 8px;
+        height: 8px;
+        background-color:royalblue;
+        border-radius: 50%;
+        margin-left: -5px;
+        transform: scale(2);
+    }
+
+    #caja-reproductor {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 91%;
+        margin: auto auto;
+        margin-top: 10px;
+        background-color:#3333;
+        border-radius: 10px;
+    }
+
+    #caja-datos-imagen-reproductor{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #datos-audio{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        align-items: center;
+        width: 40%;
+        margin-right: 2%;
+        text-align: center;
+    }
+
+    .ancho-input{
+    text-align: center;
+    }
+
+
+    #imagen-reproductor{
+        display: flex;
+        flex-flow: column wrap;
+        align-content: flex-end;
+        width: 58%;
+    }
+
+    #imagen-reproductor > img {
+        margin-right: 1%;
+        border-radius: 10px;
+        min-height: 100%;
+        
+    }
+
+    #opciones-reproductor{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 50px;
+    }
+
+    .opcion{
+        margin-top: 5px;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }    
+}
+
+
+/********** MOBILE LANDSCAPE *************/
 @media (min-width: 480px) and (max-width: 768px) {
     /**** BOTON DE PLAY O PAUSE ****/
     #player{
