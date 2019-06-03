@@ -5,7 +5,7 @@
         <div id="caja-datos-imagen-reproductor">    
             <div id="datos-audio">
                 <div class="form-group posicion-input">
-                    <label for="nombreAudio">Apodo</label>
+                    <label for="nombreAutor">Autor</label>
                     <input type="text" class="form-control ancho-input" value="<?php echo $apodo;?>" disabled>
                 </div>
 

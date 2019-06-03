@@ -11,6 +11,7 @@ $connection = new PDO("mysql:host=$host;dbname=$dbname;", $root, $password);
 $pagination = new PDO_Pagination($connection);
 
 $search = null;
+    //BUSCADOR
     if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "") {
         $search = htmlspecialchars($_REQUEST["search"]);
 
@@ -28,6 +29,7 @@ $search = null;
             $model[] = $rows;
         }
     }else {
+        //INDEX
         $pagination->rowCount("SELECT * FROM audios");
         $pagination->config(2, 8);
         
