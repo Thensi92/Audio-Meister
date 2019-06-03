@@ -85,4 +85,4 @@
 </div>
 
 
-<script src="web/scripts/registration_terms_of_use.js"></script>
+<script src="web/scripts/js/registration_terms_of_use.js"></script>
