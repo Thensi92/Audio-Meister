@@ -21,7 +21,7 @@
     $nArchivo       =   $_FILES['archivoAudio']['name'];
     $visibilidad    =   (int)$_POST["visibilidad"];
 
-    if(isset($_POST["audio"]["userImage"];)){
+    if(isset($_POST["audio"]["userImage"])){
         $imagen  =   $_POST["audio"]["userImage"];
     }else{
         $imagen  =   $_POST["imagen"];

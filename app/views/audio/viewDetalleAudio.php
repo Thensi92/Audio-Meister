@@ -90,3 +90,5 @@ require_once("app/controllers/comentario/controllerVerComentarios.php");
         fillBar.style.width = position * 100 + '%';
     });
 </script>
+
+<script src="web/scripts/js/comentarios.js"></script>
