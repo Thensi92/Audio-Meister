@@ -48,6 +48,7 @@
 
 #paginas {
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 #caja-comentarios{
@@ -62,9 +63,16 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    align-items: center;
     width: 70%;
     margin: auto;
+    margin-top: 20px;
     margin-bottom: 50px;
+    text-align: center;
+}
+
+#subida-comentarios >button{
+    width: 25%;
 }
 
 #separador-footer{
