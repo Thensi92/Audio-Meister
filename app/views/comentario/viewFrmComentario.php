@@ -11,7 +11,7 @@ if(!empty($_SESSION['datosUser'])){
         echo "</div>";
 
         
-    echo "<button type=submit name=subirComentario class='btn btn-primary'>Subir</button>";
+    echo "<button type=submit name=subirComentario class='btn btn-primary'>Comentar</button>";
     echo "</form>";
 }
     ?>
