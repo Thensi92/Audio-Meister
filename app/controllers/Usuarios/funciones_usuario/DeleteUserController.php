@@ -35,8 +35,9 @@
             if( $archivo !='.' && $archivo !='..' ){
                 if ( is_dir( $dir.$archivo ) ) {
                     eliminar_directorio( $dir.$archivo );
+                }else{
+                    unlink($dir."/".$archivo);
                 }
-            unlink($dir."/".$archivo);
             }
         }
         closedir($directorio);
