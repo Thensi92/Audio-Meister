@@ -77,6 +77,10 @@
                                         ?>
             </select>
         </div>
+        <div id="imagen-personal" class="form-group">
+            <label>Subir imagen desde dispositivo</label><br>
+            <input type="file" name="imagenPersonal" id="imagenPersonal">
+        </div>
     </div>
     <b>Cambiar Audio</b>
     <input type="checkbox" name="check" id="check" value="1" onchange="mostrar()" />

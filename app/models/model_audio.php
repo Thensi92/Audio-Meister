@@ -130,12 +130,26 @@
             return $mensaje;
         }
 
-        public function editarAudio($id,$nombre,$correoUser,$tipo,$modificarAudio,$nArchivo,$rutaTemporal,$formato,$tamanio,$rutaArchivoAntiguo,$rutaImagen,$visibilidad){
+        public function editarAudio($id,$nombre,$correoUser,$tipo,$modificarAudio,$nArchivo,$rutaTemporal,$formato,$tamanio,$rutaArchivoAntiguo,$imagen,$nombreImagen, $visibilidad){
             $tipoDefecto    = "audio/mp3";
             $rutaConst      = "web/musica/".$correoUser."/";
             $rutaDefinitiva = $rutaConst.$nArchivo;
             $tamanioMaximo  = 16777216;
             $tipoCasteado   = (int)$tipo;
+
+            if($nombreImagen != ""){
+                $carpetaImagenes        = $rutaConst."img/";
+                $rutaImagenCompleta =  $carpetaImagenes.$nombreImagen;
+
+                if(!is_dir($carpetaImagenes)){
+                    mkdir( $carpetaImagenes);
+                }
+
+                move_uploaded_file($imagen, $rutaImagenCompleta);
+                $rutaImagen         = $rutaImagenCompleta;
+            }else{
+                $rutaImagen = $imagen;
+            }
 
             if($modificarAudio)
             {  
