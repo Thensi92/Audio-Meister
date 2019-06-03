@@ -21,13 +21,15 @@
     $nArchivo       =   $_FILES['archivoAudio']['name'];
     $visibilidad    =   (int)$_POST["visibilidad"];
 
-    if(isset($_POST["audio"]["userImage"])){
-        $imagen  =   $_POST["audio"]["userImage"];
+    if(is_uploaded_file($_FILES["imagenPersonal"]["tmp_name"])){
+        $imagen     =   $_FILES["imagenPersonal"]["tmp_name"];
+        $nombreImagen = $_FILES["imagenPersonal"]["name"];
     }else{
-        $imagen  =   $_POST["imagen"];
+        $imagen     =   $_POST["imagen"];
+        $nombreImagen = "";
     }
    
-    $resultado = $conexion->subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$correoUser,$tipoArchivo,$imagen,$visibilidad);
+    $resultado = $conexion->subirArchivoAudio($nombre,$nArchivo,$rutaTemporal,$formatoArchivo,$tamañoArchivo,$correoUser,$tipoArchivo,$imagen, $nombreImagen,$visibilidad);
     $conexion->cerrarConexion();
         
     if($resultado == "Exito"){

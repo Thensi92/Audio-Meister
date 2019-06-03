@@ -4,7 +4,7 @@
         public function subirArchivoAudio(
             $nombre, $nArchivo, $rutaTemporal, 
             $formato, $tamanio, $correoUser, 
-            $tipo, $rutaImagen, $visibilidad){
+            $tipo, $imagen, $nombreImagen, $visibilidad){
            
             $tipoDefecto    = "audio/mp3";
             $tipoDefecto2   = "audio/mpeg";
@@ -15,6 +15,20 @@
             $tipoCasteado   = (int)$tipo;
             $codigo         = rand(1,1000);
 
+            if($nombreImagen != ""){
+                $carpetaImagenes        = $rutaConst."img/";
+                $rutaImagenCompleta =  $carpetaImagenes.$nombreImagen;
+
+                if(!is_dir($carpetaImagenes)){
+                    mkdir( $carpetaImagenes);
+                }
+
+                move_uploaded_file($imagen, $rutaImagenCompleta);
+                $rutaImagen         = $rutaImagenCompleta;
+            }else{
+                $rutaImagen = $imagen;
+            }
+
             if(file_exists($rutaDefinitiva)){
                 copy($rutaDefinitiva,$rutaConst.$codigo.$nArchivo);
                 $rutaDefinitiva = $rutaConst.$codigo.$nArchivo;
@@ -24,7 +38,7 @@
                     if($tamanio > $tamanioMaximo){
                         $mensaje = "Has superado el tamaño permitido"; 
                         $caja    = $this->hacerMensajeError($mensaje);
-                        
+
                     }else{
                         if(move_uploaded_file($rutaTemporal,$rutaDefinitiva)){
 

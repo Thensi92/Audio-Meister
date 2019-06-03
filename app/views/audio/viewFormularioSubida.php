@@ -34,6 +34,11 @@
             <option value="web/html/body/img/Poster3.png">Imagen 3</option>
         </select>
     </div>
+
+    <div id="imagen-personal" class="form-group">
+        <label>Subir imagen desde dispositivo</label><br>
+        <input type="file" name="imagenPersonal" id="imagenPersonal">
+    </div>
     
     <div id="div.file" class="form-group">
         <input type="file" name="archivoAudio" id="archivo" required>
