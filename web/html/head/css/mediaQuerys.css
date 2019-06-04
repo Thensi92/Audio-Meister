@@ -18,6 +18,10 @@
         padding: 25px;
         color:#333;
         display: flex;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        background-color: #4444;
         margin-left: 10px;
         margin-right: 10px;
         flex-flow: column wrap;
@@ -26,6 +30,7 @@
     }
 
     #play{
+        border-radius: 20px;
         margin-bottom: 15px;
         cursor: pointer; /*Tipo de cursor */
         background-color:royalblue;
@@ -168,6 +173,7 @@
     }
 
     #play{
+        border-radius: 20px;
         margin-bottom: 15px;
         cursor: pointer; /*Tipo de cursor */
         background-color:royalblue;
@@ -310,6 +316,7 @@
     }
 
     #play{
+        border-radius: 20px;
         margin-bottom: 15px;
         cursor: pointer; /*Tipo de cursor */
         background-color:royalblue;
@@ -453,6 +460,7 @@
     }
 
     #play{
+        border-radius: 20px;
         margin-bottom: 15px;
         cursor: pointer; /*Tipo de cursor */
         background-color:royalblue;
@@ -580,7 +588,10 @@
         padding: 25px;
         color:#333;
         display: flex;
-        
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        background-color: #4444;
         margin-left: 10px;
         margin-right: 10px;
         flex-flow: column wrap;
@@ -589,6 +600,7 @@
     }
 
     #play{
+        border-radius: 20px;
         margin-bottom: 15px;
         cursor: pointer; /*Tipo de cursor */
         background-color:royalblue;
