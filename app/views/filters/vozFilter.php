@@ -6,7 +6,7 @@
             
         echo '<div id="podcast" class="posicionamientoFlexible">';
         foreach($voz as $row){
-            echo '<div class="card" style="width: 18rem;">';
+            echo '<div id="caja-tarjeta" class="card" style="width: 18rem;">';
             echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
             
             echo '<div class="card-body">';
