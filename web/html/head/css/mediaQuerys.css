@@ -9,6 +9,10 @@
         max-height: 65%;
     }
     
+    #caja-tarjeta > #imagenOwn {
+        max-height: 55%;
+    }
+    
     /**** BOTON DE PLAY O PAUSE ****/
     #player{
         padding: 25px;
@@ -142,6 +146,10 @@
     #caja-tarjeta > img {
         max-height: 65%;
     }
+    
+    #caja-tarjeta > #imagenOwn {
+        max-height: 55%;
+    }    
     
     /**** BOTON DE PLAY O PAUSE ****/
     #player{
@@ -279,6 +287,10 @@
 
     #caja-tarjeta > img {
         max-height: 65%;
+    }
+    
+    #caja-tarjeta > #imagenOwn {
+        max-height: 55%;
     }
     
     /**** BOTON DE PLAY O PAUSE ****/
@@ -420,6 +432,10 @@
     #caja-tarjeta > img {
         max-height: 65%;
     }
+    
+    #caja-tarjeta > #imagenOwn {
+        max-height: 55%;
+    }    
     /**** BOTON DE PLAY O PAUSE ****/
     #player{
         padding: 25px;
