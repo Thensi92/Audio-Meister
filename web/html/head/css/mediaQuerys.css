@@ -1,4 +1,17 @@
 @media (min-width: 1281px) {
+    
+    .card{
+    margin-bottom: 10px;
+    max-height: 60%;
+    border: 2px solid black;
+    }
+
+    .card >img {
+        min-height: 60%;
+        max-height: 60%;
+        border: 2px solid red;
+    }
+    
     /**** BOTON DE PLAY O PAUSE ****/
     #player{
         padding: 25px;
@@ -371,6 +384,17 @@
 
 /********** PORTAIBLE *******/
 @media (min-width: 320px) and (max-width: 480px) {
+    
+    .card{
+        margin-bottom: 10px;
+        max-height: 60%;
+    }
+
+    .card >img {
+        min-height: 60%;
+        max-height: 60%;
+    }
+    
     /**** BOTON DE PLAY O PAUSE ****/
     #player{
         padding: 25px;
