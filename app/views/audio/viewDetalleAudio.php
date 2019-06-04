@@ -43,10 +43,12 @@
                 
                 echo "<div id=opciones-reproductor>";
                     echo "<button type=button class=opcion btn btn-light><a href=index.php?ctl=descargaAudio&url=$url&nombre=$nombre>Descargar</a></button>";
-                    echo "<div id='likes'>";
-                        echo "<a href=#><img src='web/html/body/img/like.png' class='iconos-reproductor' alt='Icono de me gusta'></a>";
-                        echo "<a href=#><img src='web/html/body/img/dislike.png' class='iconos-reproductor' alt='Icono de no me gusta'></a>";
-                    echo "</div>";
+                    //Si esta logeado muestra la opcion de subir el Audio
+                    if(isset($_SESSION["datosUser"]))
+                    {
+                        echo "<button type=button class=opcion btn btn-light><a href=#>Ver Comentarios</a></button>";
+                        echo '<button type="button" class="opcion btn btn-light"><a href="#">Subir Comentarios</a></button>';
+                    } 
                 echo '</div>';
             ?>
 

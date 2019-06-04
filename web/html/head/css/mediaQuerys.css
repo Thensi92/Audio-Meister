@@ -87,6 +87,7 @@
         margin-right: 1%;
         border-radius: 10px;
         min-height: 100%;
+        max-height: 100%;
         
     }
     
@@ -426,19 +427,20 @@
 
     #caja-datos-imagen-reproductor{
         display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
+        flex-flow: column wrap;
+        align-content: center;
         margin-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
     }
 
     #datos-audio{
+        margin: auto auto;
         display: flex;
         flex-flow: column wrap;
         align-content: center;
         align-items: center;
-        width: 40%;
+        width: 55%;
         margin-right: 2%;
         text-align: center;
     }
@@ -459,6 +461,7 @@
         margin-right: 1%;
         border-radius: 10px;
         min-height: 100%;
+        max-height: 100%;
         
     }
 
