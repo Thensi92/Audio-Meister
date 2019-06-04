@@ -4,6 +4,7 @@
         obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
     }
 </script>
+
 <form id="form" action="index.php?ctl=editar_audio&id=<?=$arrayDatos["id"]?>" method="POST"
     enctype="multipart/form-data">
     <div class="form-group">
@@ -50,33 +51,6 @@
             </select>
         </div>
         
-        <div class="form-group">
-            <label>Imagen</label>
-            <select class="custom-select" id="imagen" name="imagen">
-                <?php
-                                $rutaImagen = $arrayDatos["rutaImagen"];
-                                
-                                if($rutaImagen == "web/html/body/img/Poster1.png"){
-                                    echo '<option value="web/html/body/img/Poster1.png" selected>Imagen 1</option>
-                                    <option value="web/html/body/img/Poster2.png">Imagen 2</option>
-                                          <option value="web/html/body/img/Poster3.png">Imagen 3</option>';
-                                          
-                                        }else if($rutaImagen == "web/html/body/img/Poster2.png"){
-                                            
-                                            echo '<option value="web/html/body/img/Poster1.png">Imagen 1</option>
-                                            <option value="web/html/body/img/Poster2.png" selected>Imagen 2</option>
-                                            <option value="web/html/body/img/Poster3.png">Imagen 3</option>';
-                                            
-                                        }else if($rutaImagen == "web/html/body/img/Poster3.png"){
-                                            
-                                            echo '<option value="web/html/body/img/Poster1.png">Imagen 1</option>
-                                            <option value="web/html/body/img/Poster2.png">Imagen 2</option>
-                                          <option value="web/html/body/img/Poster3.png" selected>Imagen 3</option>';
-                                          
-                                        }
-                                        ?>
-            </select>
-        </div>
         <div id="imagen-personal" class="form-group">
             <label>Subir imagen desde dispositivo</label><br>
             <input type="file" name="imagenPersonal" id="imagenPersonal">
