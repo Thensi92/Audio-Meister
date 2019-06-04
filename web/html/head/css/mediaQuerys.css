@@ -56,6 +56,7 @@
         flex-flow: row wrap;
         justify-content: center;
         width: 41%;
+        max-height: 490px;
         margin: auto auto;
         margin-top: 10px;
         background-color:#3333;
@@ -69,6 +70,7 @@
         margin-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
+        max-height: 310px;
     }
 
     #datos-audio{
@@ -89,6 +91,7 @@
     #imagen-reproductor{
         display: flex;
         flex-flow: column wrap;
+        justify-content: center;
         align-content: center;
         width: 58%;
     }
@@ -96,7 +99,7 @@
     #imagen-reproductor > img {
         margin-right: 1%;
         border-radius: 10px;
-        
+        max-height: 310px;
     }
     
     .iconos-reproductor{
@@ -190,7 +193,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 91%;
+        width: 65%;
         max-height: 490px;
         margin: auto auto;
         margin-top: 10px;
@@ -328,7 +331,7 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 91%;
+        width: 71%;
         max-height: 490px;
         margin: auto auto;
         margin-top: 10px;
