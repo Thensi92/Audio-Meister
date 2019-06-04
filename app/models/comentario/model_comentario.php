@@ -6,17 +6,15 @@
             parent:: __construct($host,$usu,$pass,$db);
         }
 
-        public function subirComentario($descripcion,$correoUser,$id_audio,$puntuacion){
-            $sql = "INSERT INTO comentarios (correo,descripcion,id_audio,puntuacion) VALUES(?,?,?,?)";
+        public function subirComentario($descripcion,$correoUser,$id_audio){
+            $sql = "INSERT INTO comentarios (correo,descripcion,id_audio) VALUES(?,?,?)";
             $resultado = $this->conexion->prepare($sql);
-            $resultado->bind_param("ssii",$correoUser,$descripcion,$id_audio,$puntuacion);
+            $resultado->bind_param("ssi",$correoUser,$descripcion,$id_audio);
             $resultado->execute();
-            if($resultado->affected_rows == 1){
-                $mensaje = "Exito";
-            }else{
-                $mensaje = "Fallo"; 
-            }
-          return $mensaje;
+
+            $filasAfectadas = $resultado->affected_rows;
+
+            return $filasAfectadas;
         }
 
     
