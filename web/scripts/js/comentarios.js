@@ -2,10 +2,16 @@ let botonComentar = document.getElementById("botonComentar");
 let botonVerComentarios = document.getElementById("botonVerComentarios");
 
 let divComentar = document.getElementById("subida-comentarios");
-let divComentarios = document.getElementById("caja-comentarios");
+let divComentarios = document.getElementsByClassName("caja-comentarios");
 
 divComentar.style.display = "none"
-divComentarios.style.display = "none"
+
+if(divComentarios != undefined){
+    for(let comentario of divComentarios){
+        comentario.style.display = "none";
+    }
+}
+
 
 botonComentar.addEventListener("click", function(){
 
@@ -13,20 +19,23 @@ botonComentar.addEventListener("click", function(){
     if(status != "none"){
         status = "none";
     }else{
-        status = "block";
+        status = "flex";
     }
 
     divComentar.style.display = status;
 });
 
 botonVerComentarios.addEventListener("click", function(){
-    let status = divComentarios.style.display;
-    if(status != "none"){
-        status = "none";
-    }else{
-        status = "block";
+    if(divComentarios != undefined){
+        for(let comentario of divComentarios){
+            let status = comentario.style.display;
+            if(status != "none"){
+                status = "none";
+            }else{
+                status = "flex";
+            }
+    
+            comentario.style.display = status;
+        }
     }
-
-    divComentarios.style.display = status;
-
 });

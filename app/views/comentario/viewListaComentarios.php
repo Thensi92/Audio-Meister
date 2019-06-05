@@ -9,7 +9,7 @@
         $apodo = $con->getApodo($correo);
         
         if(!empty($_SESSION['datosUser'])){
-            echo "<div id=caja-comentarios>";
+            echo "<div class=caja-comentarios>";
                 echo "<div class=card>";
                     echo "<div class=card-header>";
                         echo "$apodo";

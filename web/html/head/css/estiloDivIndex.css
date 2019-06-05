@@ -48,7 +48,7 @@
     margin-top: 50px;
 }
 
-#caja-comentarios{
+.caja-comentarios{
     display: flex;
     flex-flow: column wrap;
     margin: auto;
