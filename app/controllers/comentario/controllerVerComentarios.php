@@ -15,7 +15,7 @@
      $pagination->rowCount("SELECT * FROM Comentarios WHERE id_audio = $id ");
      $pagination->config(3, 99);
      
-     $sql = "SELECT * FROM Comentarios WHERE id_audio = $id LIMIT $pagination->start_row, $pagination->max_rows";
+     $sql = "SELECT * FROM comentarios WHERE id_audio = $id LIMIT $pagination->start_row, $pagination->max_rows";
      $query = $conexion->prepare($sql);
      $query->execute();
      $model = array();
