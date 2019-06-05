@@ -26,4 +26,7 @@ botonVerComentarios.addEventListener("click", function(){
     }else{
         status = "block";
     }
+
+    divComentarios.style.display = status;
+
 });
