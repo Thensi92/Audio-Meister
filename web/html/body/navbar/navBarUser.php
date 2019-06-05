@@ -33,9 +33,9 @@ require_once("app/controllers/audios/busquedaAudios.php");
           Generos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="index.php?ctl=musica">Musica</a>
-          <a class="dropdown-item" href="index.php?ctl=voz">Notas de Audio</a>
-          <a class="dropdown-item" href="index.php?ctl=podcast">Podcast</a>
+          <a class="dropdown-item" href="index.php?ctl=podcast&tipo_genero=1">Podcast</a>
+          <a class="dropdown-item" href="index.php?ctl=voz&tipo_genero=2">Notas de Audio</a>
+          <a class="dropdown-item" href="index.php?ctl=musica&tipo_genero=3">Musica</a>
         </div>
       </li>
 

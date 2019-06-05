@@ -212,6 +212,22 @@
             }
             return $mensaje;
         }
-        
+
+        public function filtrarPorGenero($genero){
+            $sql = "SELECT * FROM audios WHERE id_tipo = ? ORDER BY fecha_subida";
+            $stmt = $this->conexion->prepare($sql);
+            $stmt->bind_param("i",$genero);
+            $stmt->execute();
+
+            $datos_audios_filtrados = array();
+
+            while($resultado = $stmt->get_result()){
+                $datos_audios_filtrados = $resultado;
+            }
+
+            $stmt->close();
+            return $datos_audios_filtrados;
+                
+        }
     }
 ?>

@@ -2,25 +2,33 @@
 
 require_once('app/db/config.php');
 require_once("app/models/conexion/model_conexion_BBDD.php");
-require_once('app/controllers/audios/busquedaAudios.php');
+require_once("app/models/model_audio.php");
 
 $host = Config::$metodoConexion;
 $usu = Config::$usuario;
 $pass = Config::$contraseña;
 $db = Config::$nombreBaseDatos;
 
+$audio = new Audio($host,$usu,$pass,$db);
+
 $podcast = array();
 $voz = array();
 $musica = array();
 
-foreach($model as $row){
-    if($row['id_tipo'] == 1){
-        $podcast[] = $row;
-    }else if($row['id_tipo'] == 2){
-        $voz[] = $row;
-    }else if($row['id_tipo'] == 3){
-        $musica[] = $row;
+    if(isset($_GET['ctl'])){
+        
+        $genero = $_GET['tipo_genero'];
+
+        if($_GET['tipo_genero'] == 1){
+            $podcast = $audio->filtrarPorGenero($genero);
+        }else if($_GET['tipo_genero'] == 2){
+            $voz = $audio->filtrarPorGenero($genero);
+        }else if($_GET['tipo_genero'] == 3){
+            $musica = $audio->filtrarPorGenero($genero);
+        }
+
+        $audio->cerrarConexion();
     }
-}
+
 
 ?>

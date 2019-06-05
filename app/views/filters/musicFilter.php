@@ -6,13 +6,13 @@
         echo '<h1 class="titulos_generos"> MUSICA </h1>';
         
         echo '<div id="podcast" class="posicionamientoFlexible">';
-        foreach($musica as $row){
+        foreach($musica as $key => $value){
             echo '<div id="caja-tarjeta" class="card" style="width: 18rem;">';
-            echo '<img class="card-img-top" src='.$row["ruta_imagen_audio"].'>';
+            echo '<img class="card-img-top" src='.$value["ruta_imagen_audio"].'>';
             
             echo '<div class="card-body">';
-            echo '<h5 class="card-title">'.$row["nombre_audio"].'</h5>';
-            echo '<a href="index.php?ctl=detalleAudio&&id='.$row["id_audio"].'" class="btn btn-primary">Ver</a>';
+            echo '<h5 class="card-title">'.$value["nombre_audio"].'</h5>';
+            echo '<a href="index.php?ctl=detalleAudio&&id='.$value["id_audio"].'" class="btn btn-primary">Ver</a>';
             echo '</div>';
             
             echo '</div>';
