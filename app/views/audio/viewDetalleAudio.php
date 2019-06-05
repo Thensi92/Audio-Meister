@@ -46,8 +46,8 @@
                     //Si esta logeado muestra la opcion de subir el Audio
                     if(isset($_SESSION["datosUser"]))
                     {
-                        echo "<button type=button class=opcion btn btn-light><a href=#>Ver Comentarios</a></button>";
-                        echo '<button type="button" class="opcion btn btn-light"><a href="#">Subir Comentarios</a></button>';
+                        echo '<button type=button class=opcion btn btn-light id="botonVerComentarios"><a href=#>Ver Comentarios</a></button>';
+                        echo '<button type="button" class="opcion btn btn-light" id="botonComentar"><a href="#">Subir Comentarios</a></button>';
                     } 
                 echo '</div>';
             ?>
