@@ -12,7 +12,7 @@ require_once('app/controllers/audios/busquedaAudios.php');
                     
         echo '<div id="caja-body-tarjeta" class="card-body">';
         echo '<h5 class="card-title">'.$row["nombre_audio"].'</h5>';
-        echo '<a href="index.php?ctl=detalleAudio&&id='.$row["id_audio"].'" class="btn btn-primary">Ver</a>';
+        echo '<a href="index.php?ctl=detalleAudio&id='.$row["id_audio"].'" class="btn btn-primary">Ver</a>';
         echo '</div>';
                     
         echo '</div>';
