@@ -1,8 +1,8 @@
-let botonComentar = document.getElementById("#botonComentar");
-let botonVerComentarios = document.getElementById("#botonVerComentarios");
+let botonComentar = document.getElementById("botonComentar");
+let botonVerComentarios = document.getElementById("botonVerComentarios");
 
-let divComentar = document.getElementById("#subida-comentarios");
-let divComentarios = document.getElementById("#caja-comentarios");
+let divComentar = document.getElementById("subida-comentarios");
+let divComentarios = document.getElementById("caja-comentarios");
 
 divComentar.style.display = "none"
 divComentarios.style.display = "none"
