@@ -1,5 +1,10 @@
 <?php
-    include "app/db/config.php";
+
+    if (!isset($_SESSION['datosUser'])) {
+        header("location: index.php");
+    }
+    
+    require_once("app/db/config.php");
     include "app/models/conexion/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
 

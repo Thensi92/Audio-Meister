@@ -1,5 +1,5 @@
 <?php
-    include "app/db/config.php";
+    require_once("app/db/config.php");
     include "app/models/conexion/model_conexion_BBDD.php";
     include "app/models/model_audio.php";
     include "app/lib/getid3/getid3.php";

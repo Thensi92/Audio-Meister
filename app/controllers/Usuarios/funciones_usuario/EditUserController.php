@@ -29,10 +29,10 @@
                 $_SESSION['datosUser'] = $datosUsuario;
                 $_POST["Temp_Hash"] = "";
                 $usuario->cerrarConexion();
-                /*
+                
                 if($oldEmail != $newEmail){
                     rename("web/musica/$oldEmail", "web/musica/$newEmail");
-                }*/
+                }
             }
             
             header("Location: index.php?ctl=viewUser");

@@ -12,7 +12,7 @@ require_once("app/controllers/audios/busquedaAudios.php");
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
@@ -20,25 +20,21 @@ require_once("app/controllers/audios/busquedaAudios.php");
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Audios
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Audios</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="index.php?ctl=ver_frmSubida">Subir Audio</a>
           <a class="dropdown-item" href="index.php?ctl=verOwnAudios">Mis Audios</a>
+        </div>
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Generos
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Generos</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="index.php?ctl=podcast&tipo_genero=1">Podcast</a>
           <a class="dropdown-item" href="index.php?ctl=voz&tipo_genero=2">Notas de Audio</a>
           <a class="dropdown-item" href="index.php?ctl=musica&tipo_genero=3">Musica</a>
         </div>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" href="index.php?ctl=desconectar">Desconectar</a>
       </li>
@@ -47,7 +43,7 @@ require_once("app/controllers/audios/busquedaAudios.php");
 
     <form method="POST" action="<?php echo $_SERVER["PHP_SELF"] ?>" id="caja_busqueda">
       <input class="form-control mr-sm-2" type="search" aria-label="Search" name="search" value="<?php echo $search ?>">
-      <input type="submit" class="btn btn-outline-success my-1 my-sm-0" value="Buscar">
+      <input type="submit" class="btn btn-outline-success my-0 my-sm-0" value="Buscar">
     </form>
 
   </div>

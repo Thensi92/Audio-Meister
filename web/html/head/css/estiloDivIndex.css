@@ -33,6 +33,7 @@
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 
@@ -79,4 +80,13 @@
 
 #gestionesAdmin{
     margin-bottom: 40px;
+}
+
+button > a {
+    color: white;
+}
+
+button > a:hover {
+    text-decoration: none;
+    color: white;
 }
