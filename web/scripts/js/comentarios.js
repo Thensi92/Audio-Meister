@@ -16,11 +16,21 @@ botonComentar.addEventListener("click", function(){
 
     let status = divComentar.style.display;
     if(status != "none"){
+        //changue value for display;
         status = "none";
+        //Changue text
         botonComentar.textContent = "Comentar";
+        //changue class
+        botonComentar.classList.remove("btn-danger");
+        botonComentar.classList.add("btn-warning");
     }else{
+        //changue value for display;
         status = "flex";
+        //Changue text
         botonComentar.textContent = "Ocultar";
+        //changue class
+        botonComentar.classList.remove("btn-warning");
+        botonComentar.classList.add("btn-danger");
     }
 
     divComentar.style.display = status;
@@ -32,14 +42,23 @@ botonVerComentarios.addEventListener("click", function(){
             let status = comentario.style.display;
 
             if(status != "none"){
+                //changue value for display;
                 status = "none";
+                //Changue text
                 botonVerComentarios.textContent = "Ver comentarios";
+                //changue class
+                botonVerComentarios.classList.remove("btn-danger");
+                botonVerComentarios.classList.add("btn-info");
             }else{
+                //changue value for display;
                 status = "flex";
+                //Changue text
                 botonVerComentarios.textContent = "Ocultar comentarios";
+                //changue class
+                botonVerComentarios.classList.remove("btn-info");
+                botonVerComentarios.classList.add("btn-danger");
             }
             
-            console.log(botonVerComentarios.textContent);
             comentario.style.display = status;
         }
     }
