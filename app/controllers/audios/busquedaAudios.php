@@ -1,11 +1,12 @@
 <?php
 require "app/db/Pagination.php";
+include "app/db/config.php";
 
 /* Config Connection */
-$root = 'root';
-$password = '';
-$host = 'localhost';
-$dbname = 'audio_meister';
+$root = Config::$usuario;
+$password = Config::$contraseña;
+$host = Config::$metodoConexion;
+$dbname = Config::$nombreBaseDatos;
 
 $connection = new PDO("mysql:host=$host;dbname=$dbname;", $root, $password);
 $pagination = new PDO_Pagination($connection);
