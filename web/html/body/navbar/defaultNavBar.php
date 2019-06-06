@@ -12,7 +12,7 @@ require_once("app/controllers/audios/busquedaAudios.php");
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
@@ -24,9 +24,7 @@ require_once("app/controllers/audios/busquedaAudios.php");
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Generos
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Generos</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="index.php?ctl=podcast&tipo_genero=1">Podcast</a>
           <a class="dropdown-item" href="index.php?ctl=voz&tipo_genero=2">Notas de Audio</a>
