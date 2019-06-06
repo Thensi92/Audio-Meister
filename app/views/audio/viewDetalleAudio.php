@@ -46,7 +46,7 @@
                     if(isset($_SESSION["datosUser"]))
                     {
                         echo '<button type="button" class="opcion btn btn-light" id="botonVerComentarios">Ver Comentarios</button>';
-                        echo '<button type="button" class="opcion btn btn-light" id="botonComentar">Subir Comentarios</button>';
+                        echo '<button type="button" class="opcion btn btn-light" id="botonComentar">Comentar</button>';
                     } 
                 echo '</div>';
                 ?>
