@@ -80,3 +80,12 @@
 #gestionesAdmin{
     margin-bottom: 40px;
 }
+
+button > a {
+    color: white;
+}
+
+button > a:hover {
+    text-decoration: none;
+    color: white;
+}

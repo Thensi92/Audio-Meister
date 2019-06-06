@@ -41,12 +41,12 @@
                 $id = $arrayDatos["id"];
                 
                 echo "<div id='opciones-reproductor'>";
-                    echo '<button type="button" class="opcion btn btn-light"><a href='."index.php?ctl=descargaAudio&url=$url&nombre=$nombre".'>Descargar</a></button>';
+                    echo '<button id="descargar" type="button" class="opcion btn btn-success"><a href='."index.php?ctl=descargaAudio&url=$url&nombre=$nombre".'>Descargar</a></button>';
                     //Si esta logeado muestra la opcion de subir el Audio
                     if(isset($_SESSION["datosUser"]))
                     {
-                        echo '<button type="button" class="opcion btn btn-light" id="botonVerComentarios">Ver Comentarios</button>';
-                        echo '<button type="button" class="opcion btn btn-light" id="botonComentar">Comentar</button>';
+                        echo '<button type="button" class="opcion btn btn-info" id="botonVerComentarios">Ver Comentarios</button>';
+                        echo '<button type="button" class="opcion btn btn-warning" id="botonComentar">Comentar</button>';
                     } 
                 echo '</div>';
                 ?>
