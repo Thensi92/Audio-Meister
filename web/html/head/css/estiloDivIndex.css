@@ -8,10 +8,10 @@
 }
 
 #datos_usuario{
-    margin-top: 25px;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    margin-top: 35px;
 }
 
 #datos_usuario >ul>li{
@@ -21,6 +21,7 @@
 #botones {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 #botones > a > button[name="editar"]{
