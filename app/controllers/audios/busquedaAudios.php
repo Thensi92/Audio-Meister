@@ -1,6 +1,6 @@
 <?php
 require "app/db/Pagination.php";
-include "app/db/config.php";
+require_once("app/db/config.php");
 
 /* Config Connection */
 $root = Config::$usuario;
