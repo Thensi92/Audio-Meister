@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Index temporal</title>
+    <title>Audio Meister</title>
     
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="web/html/head/css/estiloDivIndex.css">
