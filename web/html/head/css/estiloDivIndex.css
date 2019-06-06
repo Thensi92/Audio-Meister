@@ -12,10 +12,22 @@
     flex-flow: column wrap;
     align-content: center;
     margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+#datos_usuario > ul{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin-top: 35px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #3333;
+    
 }
 
 #datos_usuario >ul>li{
-    list-style: none;
+    list-style: disclosure-closed;
 }
 
 #botones {
