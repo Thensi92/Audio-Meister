@@ -1,7 +1,7 @@
     <div id="view_product">
     
     <?php
-    if(!empty($podcast)) {
+    if($podcast->num_rows > 0) {
         echo '<h1 class="titulos_generos">PODCAST</h1>';
         
         echo '<div id="podcast" class="posicionamientoFlexible">';

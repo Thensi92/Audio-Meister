@@ -1,7 +1,7 @@
     <div id="view_product">
     
     <?php
-    if(!empty($voz)) {
+    if(($voz->num_rows > 0) {
         echo '<h1 class="titulos_generos">NOTAS DE AUDIO</h1>';
             
         echo '<div id="podcast" class="posicionamientoFlexible">';
@@ -21,12 +21,6 @@
     </div>
 
     <?php
-    echo "<center>";
-        echo "<div>";
-            $pagination->pages("btn btn-primary");
-        echo "</div>";
-    echo "</center>";
-    
     }else{
         require_once("app/views/errores/vista_podcastVacio.php");
     }
