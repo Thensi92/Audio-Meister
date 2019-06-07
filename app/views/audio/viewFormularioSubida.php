@@ -46,7 +46,7 @@ include "app/controllers/audio/controller_errorUsuarioAudio.php";
     </div>
 
     <div id="div.file" class="form-group">
-        <label>Subir audio desde dispositivo</label><br>
+        <label>Subir archivo .mp3</label><br>
         <input type="file" name="archivoAudio" id="archivo" required>
     </div>
     <button type="submit" name="insertar_audio" class="btn btn-primary">Subir</button>
